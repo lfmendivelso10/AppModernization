@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: VisualizacionMetricas3.edit;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: visualizacionMetricas3.provider.VisualizacionMetricas3EditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: visualizacionMetricas3.provider,
+ visualizacionMetricas3.representacion.provider,
+ visualizacionMetricas3.visualizacion.provider
+Require-Bundle: org.eclipse.core.runtime,
+ VisualizacionMetricas3;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy

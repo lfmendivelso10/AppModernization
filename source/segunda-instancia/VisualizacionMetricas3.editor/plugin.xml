@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated visualizacionMetricas -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="visualizacionMetricas3.presentation.VisualizacionMetricas3ModelWizardID"
+            name="%_UI_VisualizacionMetricas3ModelWizard_label"
+            class="visualizacionMetricas3.presentation.VisualizacionMetricas3ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/VisualizacionMetricas3ModelFile.gif">
+         <description>%_UI_VisualizacionMetricas3ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated visualizacionMetricas -->
+      <editor
+            id="visualizacionMetricas3.presentation.VisualizacionMetricas3EditorID"
+            name="%_UI_VisualizacionMetricas3Editor_label"
+            icon="icons/full/obj16/VisualizacionMetricas3ModelFile.gif"
+            extensions="visualizacionmetricas3"
+            class="visualizacionMetricas3.presentation.VisualizacionMetricas3Editor"
+            contributorClass="visualizacionMetricas3.presentation.VisualizacionMetricas3ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated visualizacionMetricas -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="visualizacionMetricas3.representacion.presentation.RepresentacionModelWizardID"
+            name="%_UI_RepresentacionModelWizard_label"
+            class="visualizacionMetricas3.representacion.presentation.RepresentacionModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RepresentacionModelFile.gif">
+         <description>%_UI_RepresentacionModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated visualizacionMetricas -->
+      <editor
+            id="visualizacionMetricas3.representacion.presentation.RepresentacionEditorID"
+            name="%_UI_RepresentacionEditor_label"
+            icon="icons/full/obj16/RepresentacionModelFile.gif"
+            extensions="representacion"
+            class="visualizacionMetricas3.representacion.presentation.RepresentacionEditor"
+            contributorClass="visualizacionMetricas3.representacion.presentation.RepresentacionActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated visualizacionMetricas -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="visualizacionMetricas3.visualizacion.presentation.VisualizacionModelWizardID"
+            name="%_UI_VisualizacionModelWizard_label"
+            class="visualizacionMetricas3.visualizacion.presentation.VisualizacionModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/VisualizacionModelFile.gif">
+         <description>%_UI_VisualizacionModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated visualizacionMetricas -->
+      <editor
+            id="visualizacionMetricas3.visualizacion.presentation.VisualizacionEditorID"
+            name="%_UI_VisualizacionEditor_label"
+            icon="icons/full/obj16/VisualizacionModelFile.gif"
+            extensions="visualizacion"
+            class="visualizacionMetricas3.visualizacion.presentation.VisualizacionEditor"
+            contributorClass="visualizacionMetricas3.visualizacion.presentation.VisualizacionActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

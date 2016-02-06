@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated visualizacionMetricas -->
+      <package
+            uri="http://visualizacionMetricas3"
+            class="visualizacionMetricas3.VisualizacionMetricas3Package"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated visualizacionMetricas -->
+      <package
+            uri="http://visualizacionMetricas3/representacion"
+            class="visualizacionMetricas3.representacion.RepresentacionPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated visualizacionMetricas -->
+      <package
+            uri="http://visualizacionMetricas3/visualizacion"
+            class="visualizacionMetricas3.visualizacion.VisualizacionPackage"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/VisualizacionMetricas3/src" editDirectory="/VisualizacionMetricas3.edit/src"
+    editorDirectory="/VisualizacionMetricas3.editor/src" modelPluginID="VisualizacionMetricas3"
+    modelName="VisualizacionMetricas3" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>visualizacionMetricas.ecore</foreignModel>
+  <genPackages prefix="VisualizacionMetricas3" disposableProviderFactory="true" ecorePackage="visualizacionMetricas.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="visualizacionMetricas.ecore#//TipoMetrica">
+      <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//TipoMetrica/CalculatedCoupling"/>
+      <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//TipoMetrica/WeightedMethodsPerClass"/>
+      <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//TipoMetrica/NumberOfUses"/>
+      <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//TipoMetrica/NumberOfContainments"/>
+      <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//TipoMetrica/CouplingBetweenObjects"/>
+      <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//TipoMetrica/NumberOfClassesMeasure"/>
+      <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//TipoMetrica/NumberOfLinesMeasure"/>
+      <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//TipoMetrica/ClusterRelationConflictPercentageMeasureTarget"/>
+      <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//TipoMetrica/ClusterRelationConflictPercentageMeasureSource"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//Elemento">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//Elemento/relaciones"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//Elemento/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//Nodo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//Nodo/hijos"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//Hoja"/>
+    <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//Medible">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//Medible/metricas"/>
+    </genClasses>
+    <genClasses ecoreClass="visualizacionMetricas.ecore#//Arco">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//Arco/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//Arco/tipos"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//Arco/source"/>
+    </genClasses>
+    <genClasses ecoreClass="visualizacionMetricas.ecore#//Metrica">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//Metrica/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//Metrica/valor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//TipoRelacion"/>
+    <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//Vinculo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//Vinculo/elementos"/>
+    </genClasses>
+    <genClasses ecoreClass="visualizacionMetricas.ecore#//MetricaRelacion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//MetricaRelacion/relacion"/>
+    </genClasses>
+    <nestedGenPackages prefix="Representacion" basePackage="visualizacionMetricas3"
+        disposableProviderFactory="true" ecorePackage="visualizacionMetricas.ecore#//representacion">
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Cluster"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Paquete"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Modulo"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Clase"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Archivo"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Servicio"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Tabla"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Form"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Aplicacion"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Dependencia"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Asociacion"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Composicion"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Agregacion"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Generalizacion"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Metodo"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Atributo"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//representacion/Intercepcion">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//representacion/Intercepcion/arco"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Visualizacion" basePackage="visualizacionMetricas3"
+        disposableProviderFactory="true" ecorePackage="visualizacionMetricas.ecore#//visualizacion">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="visualizacionMetricas.ecore#//visualizacion/Color">
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Color/white"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Color/black"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Color/blue"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Color/chocolate"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Color/gray"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Color/green"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Color/orange"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Color/purple"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Color/red"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Color/yellow"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="visualizacionMetricas.ecore#//visualizacion/Alineacion">
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Alineacion/CENTRO"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Alineacion/IZQUIERDA"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Alineacion/DERECHA"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="visualizacionMetricas.ecore#//visualizacion/Posicion">
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Posicion/BORDE"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/Posicion/NODO"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="visualizacionMetricas.ecore#//visualizacion/EstiloLinea">
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/EstiloLinea/SOLIDA"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/EstiloLinea/TRAZOS"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/EstiloLinea/PUNTOS"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/EstiloLinea/MIXTA"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="visualizacionMetricas.ecore#//visualizacion/TipoEnrutamiento">
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoEnrutamiento/DIRECTO"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoEnrutamiento/RECTILINEO"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoEnrutamiento/ARBOL"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="visualizacionMetricas.ecore#//visualizacion/TipoFlecha">
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoFlecha/NO_TIENE"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoFlecha/SENCILLA"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoFlecha/TRIANGULAR"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoFlecha/TRIANGULAR_RELLENA"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoFlecha/DIAMANTE"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoFlecha/DIAMANTE_RELLENA"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoFlecha/FLECHA_DIAMANTE"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoFlecha/FLECHA_DIAMANTE_RELLENA"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoFlecha/PATA_GALLINA"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoFlecha/PATA_GALLINA_TRIANGULAR"/>
+        <genEnumLiterals ecoreEnumLiteral="visualizacionMetricas.ecore#//visualizacion/TipoFlecha/PATA_GALLINA_RELLENA"/>
+      </genEnums>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Elipse"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Cuadrilatero"/>
+      <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//visualizacion/Contenedor">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//visualizacion/Contenedor/elementos"/>
+      </genClasses>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Clase"/>
+      <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//visualizacion/FiguraGeometrica">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/FiguraGeometrica/color"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/FiguraGeometrica/largo"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/FiguraGeometrica/alto"/>
+      </genClasses>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Rombo"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Triangulo"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Paquete"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Diagrama">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Diagrama/isRoot"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//visualizacion/ElementoDiagrama">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/ElementoDiagrama/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//visualizacion/ElementoDiagrama/label"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//visualizacion/ElementoDiagrama/borde"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//visualizacion/ElementoDiagrama/conectores"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//visualizacion/NavegacionDiagrama">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//visualizacion/NavegacionDiagrama/diagrama"/>
+      </genClasses>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Label">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Label/isBold"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Label/isItalic"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Label/alineacion"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Label/posicion"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Label/color"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Label/tamanio"/>
+      </genClasses>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Borde"/>
+      <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//visualizacion/Conector">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Conector/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Conector/estilo"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Conector/enrutamiento"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Conector/flecha_source"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Conector/flecha_target"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//visualizacion/Conector/source"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference visualizacionMetricas.ecore#//visualizacion/Conector/target"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Conector/nameSource"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Conector/nameTarget"/>
+      </genClasses>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Punto"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Herencia"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Implementacion"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Dependencia"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Asociacion"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Agregacion"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Composicion"/>
+      <genClasses ecoreClass="visualizacionMetricas.ecore#//visualizacion/Item">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Item/icono"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="visualizacionMetricas.ecore#//visualizacion/Dibujable">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Dibujable/grosor"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualizacionMetricas.ecore#//visualizacion/Dibujable/color"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

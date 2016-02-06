@@ -1,0 +1,40 @@
+/**
+ */
+package visualizacionMetricas3.visualizacion;
+
+import org.eclipse.emf.common.util.EList;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Contenedor</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link visualizacionMetricas3.visualizacion.Contenedor#getElementos <em>Elementos</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see visualizacionMetricas3.visualizacion.VisualizacionPackage#getContenedor()
+ * @model interface="true" abstract="true"
+ * @generated
+ */
+public interface Contenedor extends ElementoDiagrama {
+	/**
+	 * Returns the value of the '<em><b>Elementos</b></em>' containment reference list.
+	 * The list contents are of type {@link visualizacionMetricas3.visualizacion.ElementoDiagrama}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Elementos</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Elementos</em>' containment reference list.
+	 * @see visualizacionMetricas3.visualizacion.VisualizacionPackage#getContenedor_Elementos()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ElementoDiagrama> getElementos();
+
+} // Contenedor

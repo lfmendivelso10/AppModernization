@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualizacionMetricas3.visualizacion="http://visualizacionMetricas3/visualizacion">
+<visualizacionMetricas3.visualizacion:Diagrama name="clusters myApp" isRoot="true">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Elipse" diagrama="/8" name="Cluster A"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Elipse" diagrama="/16" name="Cluster B"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Elipse" diagrama="/24" name="Cluster C"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Elipse" diagrama="/32" name="Cluster D"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Elipse" diagrama="/40" name="Cluster E"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases qwe.rty.uio">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase alpha"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase b&#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase gamma"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases asd.fgh.jkl">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase delta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xe9;psilon"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase dz&#x113;ta"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases zxc.vbn.m">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase th&#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase iota"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases lap.cum.zpq">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase kappa"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase lambda"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xf3;micron"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases poi.uyt.rew">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase sigma"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xfd;psilon"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#x14d;mega"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases lkj.hgf.dsa"/>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases mnb.vcx.z"/>
+  <visualizacionMetricas3.visualizacion:Diagrama name="paquetes Cluster A">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/1" name="qwe.rty.uio"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/2" name="asd.fgh.jkl"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/3" name="zxc.vbn.m"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/4" name="lap.cum.zpq"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/5" name="poi.uyt.rew"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/6" name="lkj.hgf.dsa"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/7" name="mnb.vcx.z"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases qwe.rty.uio">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase alpha"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase b&#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase gamma"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases asd.fgh.jkl">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase delta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xe9;psilon"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase dz&#x113;ta"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases zxc.vbn.m">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase th&#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase iota"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases lap.cum.zpq">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase kappa"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase lambda"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xf3;micron"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases poi.uyt.rew">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase sigma"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xfd;psilon"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#x14d;mega"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases lkj.hgf.dsa"/>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases mnb.vcx.z"/>
+  <visualizacionMetricas3.visualizacion:Diagrama name="paquetes Cluster B">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/9" name="qwe.rty.uio"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/10" name="asd.fgh.jkl"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/11" name="zxc.vbn.m"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/12" name="lap.cum.zpq"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/13" name="poi.uyt.rew"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/14" name="lkj.hgf.dsa"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/15" name="mnb.vcx.z"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases qwe.rty.uio">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase alpha"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase b&#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase gamma"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases asd.fgh.jkl">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase delta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xe9;psilon"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase dz&#x113;ta"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases zxc.vbn.m">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase th&#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase iota"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases lap.cum.zpq">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase kappa"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase lambda"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xf3;micron"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases poi.uyt.rew">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase sigma"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xfd;psilon"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#x14d;mega"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases lkj.hgf.dsa"/>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases mnb.vcx.z"/>
+  <visualizacionMetricas3.visualizacion:Diagrama name="paquetes Cluster C">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/17" name="qwe.rty.uio"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/18" name="asd.fgh.jkl"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/19" name="zxc.vbn.m"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/20" name="lap.cum.zpq"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/21" name="poi.uyt.rew"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/22" name="lkj.hgf.dsa"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/23" name="mnb.vcx.z"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases qwe.rty.uio">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase alpha"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase b&#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase gamma"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases asd.fgh.jkl">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase delta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xe9;psilon"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase dz&#x113;ta"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases zxc.vbn.m">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase th&#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase iota"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases lap.cum.zpq">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase kappa"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase lambda"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xf3;micron"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases poi.uyt.rew">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase sigma"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xfd;psilon"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#x14d;mega"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases lkj.hgf.dsa"/>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases mnb.vcx.z"/>
+  <visualizacionMetricas3.visualizacion:Diagrama name="paquetes Cluster D">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/25" name="qwe.rty.uio"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/26" name="asd.fgh.jkl"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/27" name="zxc.vbn.m"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/28" name="lap.cum.zpq"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/29" name="poi.uyt.rew"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/30" name="lkj.hgf.dsa"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/31" name="mnb.vcx.z"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases qwe.rty.uio">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase alpha"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase b&#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase gamma"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases asd.fgh.jkl">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase delta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xe9;psilon"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase dz&#x113;ta"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases zxc.vbn.m">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase th&#x113;ta"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase iota"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases lap.cum.zpq">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase kappa"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase lambda"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xf3;micron"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases poi.uyt.rew">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase sigma"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#xfd;psilon"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Clase" name="Clase &#x14d;mega"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases lkj.hgf.dsa"/>
+  <visualizacionMetricas3.visualizacion:Diagrama name="clases mnb.vcx.z"/>
+  <visualizacionMetricas3.visualizacion:Diagrama name="paquetes Cluster E">
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/33" name="qwe.rty.uio"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/34" name="asd.fgh.jkl"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/35" name="zxc.vbn.m"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/36" name="lap.cum.zpq"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/37" name="poi.uyt.rew"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/38" name="lkj.hgf.dsa"/>
+    <elementos xsi:type="visualizacionMetricas3.visualizacion:Paquete" diagrama="/39" name="mnb.vcx.z"/>
+  </visualizacionMetricas3.visualizacion:Diagrama>
+ </xmi:XMI> 

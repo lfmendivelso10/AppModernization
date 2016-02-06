@@ -1,0 +1,109 @@
+import "representacion2visualizacion.core.etl";
+import "representacion2visualizacion.metricas.etl";
+
+/*@abstract
+rule Medible2Conector
+	transform i: source!Medible
+	to o: target!Conector {
+		guard : i.metricas.isDefined()
+		o.~metricas = i.metricas;
+}*/
+
+@abstract
+rule Arco2Conector
+	transform i: source!Arco
+	to o: target!Conector 
+	extends Medible2NavegacionDiagrama { --Medible2Conector {
+		o.source ::= i.source;
+		o.target ::= i.target;
+		o.~arco = i;
+		o.name = i.buscarMetricaCouplingBetweenObjects();
+		i.buscarMetricaClusterRelationConflictPercentageMeasure(o);
+		--o.nameSource = i.buscarMetricaClusterRelationConflictPercentageMeasureSource();
+		--o.nameTarget = i.buscarMetricaClusterRelationConflictPercentageMeasureTarget();
+}
+
+rule Dependencia2Dependencia
+	transform i: source!Arco
+	to o: target!Dependencia 
+	extends Arco2Conector {
+		guard : not i.tipos->select(t | t.isTypeOf(source!Dependencia)).isEmpty()
+		o.flecha_target = target!TipoFlecha#SENCILLA;
+		o.enrutamiento = target!TipoEnrutamiento#DIRECTO;
+		--o.name = i.buscarMetricaCouplingBetweenObjects();
+}
+
+rule Asociacion2Asociacion
+	transform i: source!Arco
+	to o: target!Asociacion 
+	extends Arco2Conector {
+		guard : not i.tipos->select(t | t.isTypeOf(source!Asociacion)).isEmpty()
+		o.flecha_target = target!TipoFlecha#NO_TIENE;
+		o.enrutamiento = target!TipoEnrutamiento#DIRECTO;
+}
+
+rule Agregacion2Agregacion
+	transform i: source!Arco
+	to o: target!Agregacion 
+	extends Arco2Conector {
+		guard : not i.tipos->select(t | t.isTypeOf(source!Agregacion)).isEmpty()
+		o.flecha_target = target!TipoFlecha#DIAMANTE;
+		o.enrutamiento = target!TipoEnrutamiento#RECTILINEO;
+}
+
+rule Composicion2Composicion
+	transform i: source!Arco
+	to o: target!Composicion 
+	extends Arco2Conector {
+		guard : not i.tipos->select(t | t.isTypeOf(source!Composicion)).isEmpty()
+		o.flecha_target = target!TipoFlecha#DIAMANTE_RELLENA;
+		o.enrutamiento = target!TipoEnrutamiento#RECTILINEO;
+}
+
+rule Generalizacion2Herencia
+	transform i: source!Arco
+	to o: target!Herencia 
+	extends Arco2Conector {
+		guard : not i.tipos->select(t | t.isTypeOf(source!Generalizacion)).isEmpty()
+		o.flecha_target = target!TipoFlecha#TRIANGULAR;
+		o.enrutamiento = target!TipoEnrutamiento#ARBOL;
+}
+
+--Sincroniza las referencias de las tranformaciones de entidades tipo Intercepcion al conector respectivo 
+operation actualizarReferenciasDiagrama() {
+	var diagramas = target!Diagrama.allInstances()->select(d | d.~arco.isDefined());
+	var conectores = target!Conector.allInstances()->select(c | c.~arco.isDefined());
+	
+	"\tNúmero diagramas: ".print();
+	diagramas.size().println();
+	"\tNúmero conectores: ".print();
+	conectores.size().println();
+	
+	for (d in diagramas) {
+		for (c in conectores) {
+			if(d.~arco = c.~arco) {
+				c.diagrama = d;
+				break;
+			}
+		}
+		
+		"*".print();
+	}
+}
+/*operation actualizarReferenciasDiagrama() {
+	var conectores = target!Conector.allInstances()->select(c | c.~arco.isDefined());
+	
+	"\tNúmero conectores: ".print();
+	conectores.size().println();
+	
+	for (c in conectores) {
+		var diagrama = target!Diagrama.allInstances()->select(d | d.~arco.isDefined() and (d.~arco = c.~arco))->first();
+	
+		if(diagrama.isDefined()) {
+			c.diagrama = diagrama;
+			break;
+		}
+		
+		"*".print();
+	}
+}*/

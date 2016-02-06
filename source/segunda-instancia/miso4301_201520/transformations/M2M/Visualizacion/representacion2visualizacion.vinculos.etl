@@ -1,0 +1,88 @@
+import "representacion2visualizacion.metricas.etl";
+
+operation source!Vinculo instanciarDiagrama() : target!Diagrama {
+	var diagrama = new target!Diagrama();
+	diagrama.name = self.name;
+	diagrama.diagrama = diagrama;
+	for (e in self.elementos) {
+		var c = new target!Clase;
+		c.name = e.name;
+		c.diagrama = c;
+		c.elementos = e.instanciarHijos();
+		c.conectores = e.instanciarRelaciones(c, diagrama);
+		diagrama.elementos.add(c);
+	}
+	return diagrama;
+}
+
+operation source!Clase instanciarHijos() : Sequence {
+	var elementos = new Sequence();
+	for(h in self.hijos) {
+		var e = new target!Item();
+		e.name = h.name;
+		if (h.isTypeOf(source!Atributo)) {
+			e.icono="PropertyCreation";
+		} if (h.isTypeOf(source!Metodo)) {
+			e.icono="MessageSynchCallCreation";
+		}
+		elementos.add(e);
+	}
+	return elementos;
+}
+
+operation source!Clase instanciarRelaciones(c : target!Clase, d : target!Diagrama) : Sequence {
+	var conectores = new Sequence();
+	for(r in self.relaciones) {
+		var e : target!Conector;
+		if (not r.tipos->select(t | t.isTypeOf(source!Dependencia)).isEmpty()) {
+			e = new target!Dependencia();
+			e.enrutamiento = target!TipoEnrutamiento#DIRECTO;
+			e.name = r.buscarMetricaCouplingBetweenObjects();
+		} else if (not r.tipos->select(t | t.isTypeOf(source!Asociacion)).isEmpty()) {
+			e = new target!Asociacion();
+			e.enrutamiento = target!TipoEnrutamiento#DIRECTO;
+		} else if (not r.tipos->select(t | t.isTypeOf(source!Composicion)).isEmpty()) {
+			e = new target!Composicion();
+			e.flecha_target = target!TipoFlecha#DIAMANTE_RELLENA;
+			e.enrutamiento = target!TipoEnrutamiento#RECTILINEO;
+		} else if (not r.tipos->select(t | t.isTypeOf(source!Agregacion)).isEmpty()) {
+			e = new target!Agregacion();
+			e.flecha_target = target!TipoFlecha#DIAMANTE;
+			e.enrutamiento = target!TipoEnrutamiento#RECTILINEO;
+		} else if (not r.tipos->select(t | t.isTypeOf(source!Generalizacion)).isEmpty()) {
+			e = new target!Herencia();
+			e.flecha_target = target!TipoFlecha#TRIANGULAR;
+			e.enrutamiento = target!TipoEnrutamiento#ARBOL;
+		}
+		
+		e.source = c;
+		e.~target = r.target;
+		--e.~referencias = self.~referencias;
+		e.~diagrama = d;
+		conectores.add(e);
+	}
+
+	return conectores;
+}
+
+--Sincroniza las referencias de las tranformaciones posteriores de entidades tipo ~target definidas en [operation source!Clase instanciarRelaciones(c : target!Clase, d : target!Diagrama) : Sequence]
+operation actualizarReferenciasTarget() {
+	var conectores = target!Conector.allInstances();
+	
+	"\tNúmero conectores: ".print();
+	conectores.size().println();
+	
+	for(c in conectores) {
+		var d = target!Diagrama.allInstances()->select(d | d = c.~diagrama)->first();
+		if (d.isDefined()) {
+			for(e in d.elementos) {
+				if (e.name = c.~target.name) {
+					c.target = e;
+					break;
+				}
+			}
+			
+			"*".print();
+		}	
+	}
+}
