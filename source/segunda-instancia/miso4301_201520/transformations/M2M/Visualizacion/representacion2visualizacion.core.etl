@@ -5,19 +5,3 @@ transform i: source!Medible
 		guard : i.metricas.isDefined()
 		o.~metricas = i.metricas;
 }
-
-/*@abstract
-rule Medible2ElementoDiagrama
-	transform i: source!Medible
-	to o: target!ElementoDiagrama {
-		guard : i.metricas.isDefined()
-		o.~metricas = i.metricas;
-}*/
-
-/*@abstract
-rule Medible2Conector
-	transform i: source!Medible
-	to o: target!Conector {
-		guard : i.metricas.isDefined()
-		o.~metricas = i.metricas;
-}*/

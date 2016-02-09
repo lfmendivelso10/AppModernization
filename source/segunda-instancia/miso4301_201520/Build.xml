@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:qvto="http://www.eclipse.org/qvt/1.0.0/Operational" name="kdm" default="main">
 	
-	<property name="Kdm" value="./models/carrito.logic_kdm.xmi"></property>
-	<property name="SubKdm" value="./models/SubKDM-SDM.xmi"></property>
-	<property name="Cluster" value="./models/RepresentacionModel.xmi"></property>
-	<property name="Visualizacion" value="./models/VisualizacionModel.xmi"></property>
+	<property name="KDM" value="./models/1_Input_kdm.xmi"></property>
+	<property name="SubKDMSDM" value="./models/2_SubKDM-SDM.xmi"></property>
+	<property name="Representation" value="./models/3_RepresentacionModel.xmi"></property>
+	<property name="Visualizacion" value="./models/4_VisualizacionModel.xmi"></property>
+	<property name="Simplificacion" value="./models/5_VisualizacionModel.xmi"></property>
 			
 	<!-- Tranformacion 1-->
 	<target name="Loading_KDM_to_SubKDM">
-		<epsilon.emf.loadModel name="code" modelfile="${Kdm}" metamodeluri="http://www.eclipse.org/MoDisco/kdm/code,http://www.eclipse.org/MoDisco/kdm/source,http://www.eclipse.org/MoDisco/kdm/action,http://www.eclipse.org/MoDisco/kdm/kdm" read="true" store="false"></epsilon.emf.loadModel>
-		<epsilon.emf.loadModel name="kdmMicro" modelfile="${SubKdm}" metamodeluri="http://subkdm/kdmobjects" read="false" store="true"></epsilon.emf.loadModel>
+		<epsilon.emf.loadModel name="code" modelfile="${KDM}" metamodeluri="http://www.eclipse.org/MoDisco/kdm/code,http://www.eclipse.org/MoDisco/kdm/source,http://www.eclipse.org/MoDisco/kdm/action,http://www.eclipse.org/MoDisco/kdm/kdm" read="true" store="false"></epsilon.emf.loadModel>
+		<epsilon.emf.loadModel name="kdmMicro" modelfile="${SubKDMSDM}" metamodeluri="http://subkdm/kdmobjects" read="false" store="true"></epsilon.emf.loadModel>
 	</target>
 		
 	<target name="Step1_KDM_to_SubKDM" depends="Loading_KDM_to_SubKDM">
@@ -23,7 +24,7 @@
 	
 	<!-- Tranformacion 2-->
 	<target name="Loading_SubKDM_to_SubKDM_SDM">
-		<epsilon.emf.loadModel name="sourcemodel" modelfile="${SubKdm}" metamodeluri="http://subkdm/kdmobjects,http://subkdm/kdmrelations,http://subkdm/sdm" read="true" store="true"></epsilon.emf.loadModel>
+		<epsilon.emf.loadModel name="sourcemodel" modelfile="${SubKDMSDM}" metamodeluri="http://subkdm/kdmobjects,http://subkdm/kdmrelations,http://subkdm/sdm" read="true" store="true"></epsilon.emf.loadModel>
 	</target>
 	
 	<target name="Step2_SubKDM_to_SubKDM_SDM" depends="Loading_SubKDM_to_SubKDM_SDM">
@@ -36,8 +37,8 @@
 
 	<!-- Tranformacion 3-->
 	<target name="Loading_SubKDM_SDM_to_RepresentationModel">	
-		<epsilon.emf.loadModel name="kdmMicro" modelfile="${SubKdm}" metamodeluri="http://subkdm/kdmobjects,http://subkdm/kdmrelations,http://subkdm/sdm" read="true" store="false"></epsilon.emf.loadModel>
-		<epsilon.emf.loadModel name="target" modelfile="${Cluster}" metamodeluri="http://visualizacionMetricas3,http://visualizacionMetricas3/representacion,http://visualizacionMetricas3/visualizacion" read="false" store="true"></epsilon.emf.loadModel>
+		<epsilon.emf.loadModel name="kdmMicro" modelfile="${SubKDMSDM}" metamodeluri="http://subkdm/kdmobjects,http://subkdm/kdmrelations,http://subkdm/sdm" read="true" store="false"></epsilon.emf.loadModel>
+		<epsilon.emf.loadModel name="target" modelfile="${Representation}" metamodeluri="http://visualizacionMetricas3,http://visualizacionMetricas3/representacion,http://visualizacionMetricas3/visualizacion" read="false" store="true"></epsilon.emf.loadModel>
 	</target>
 		
 	<target name="Step3_SubKDM_SDM_to_RepresentationModel" depends="Loading_SubKDM_SDM_to_RepresentationModel">
@@ -50,25 +51,37 @@
 	</target>
 	
 	<!-- Tranformacion 4-->
-		<target name="loadModelsT4">	
-			<epsilon.emf.loadModel name="source" modelfile="${Cluster}" metamodeluri="http://visualizacionMetricas3,http://visualizacionMetricas3/representacion" read="true" store="false"></epsilon.emf.loadModel>
-			<epsilon.emf.loadModel name="target" modelfile="${Visualizacion}" metamodeluri="http://visualizacionMetricas3,http://visualizacionMetricas3/visualizacion" read="false" store="true"></epsilon.emf.loadModel>
-		</target>
-			
-		<target name="sdm2Visualizacion" depends="loadModelsT4">
-			<epsilon.etl src="./transformations/M2M/Visualizacion/representacion2visualizacion.etl">
-				<model ref="source"></model>
-				<model ref="target"></model>
-			</epsilon.etl>
-		</target>
+	<target name="Loading_RepresentationModel_to_VisualizationModel">	
+		<epsilon.emf.loadModel name="source" modelfile="${Representation}" metamodeluri="http://visualizacionMetricas3,http://visualizacionMetricas3/representacion" read="true" store="false"></epsilon.emf.loadModel>
+		<epsilon.emf.loadModel name="target" modelfile="${Visualizacion}" metamodeluri="http://visualizacionMetricas3,http://visualizacionMetricas3/visualizacion" read="false" store="true"></epsilon.emf.loadModel>
+	</target>
+		
+	<target name="Step4_RepresentationModel_to_VisualizationModel" depends="Loading_RepresentationModel_to_VisualizationModel">
+		<epsilon.etl src="./transformations/M2M/Visualizacion/representacion2visualizacion.etl">
+			<model ref="source"></model>
+			<model ref="target"></model>
+		</epsilon.etl>
+	</target>
 	
+	<!-- Tranformacion 5-->
+	<target name="Loading_VisualizationModel_to_SimplificationModel">	
+		<epsilon.emf.loadModel name="source" modelfile="${Visualizacion}" metamodeluri="http://visualizacionMetricas3,http://visualizacionMetricas3/visualizacion" read="false" store="true"></epsilon.emf.loadModel>
+		<epsilon.emf.loadModel name="target" modelfile="${Simplificacion}" metamodeluri="http://visualizacionMetricas3,http://visualizacionMetricas3/visualizacion" read="false" store="true"></epsilon.emf.loadModel>
+	</target>
+				
+	<target name="Step5_VisualizationModel_to_SimplificationModel" depends="Loading_VisualizationModel_to_SimplificationModel">
+		<epsilon.etl src="./transformations/M2M/Visualizacion/visualizacion2simplificacion.etl">
+			<model ref="source"></model>
+			<model ref="target"></model>
+		</epsilon.etl>
+	</target>
+		
 	<!-- Main -->
-	
 	<target name="main">		
 		<antcall target="Step1_KDM_to_SubKDM"></antcall>
 		<antcall target="Step2_SubKDM_to_SubKDM_SDM"></antcall>
 		<antcall target="Step3_SubKDM_SDM_to_RepresentationModel"></antcall>
-		<!--<antcall target="sdm2Visualizacion"></antcall>-->		
-		<!---epsilon.disposeModels></epsilon.disposeModels>--> 
+		<antcall target="Step4_RepresentationModel_to_VisualizationModel"></antcall>
+		<antcall target="Step5_VisualizationModel_to_SimplificationModel"></antcall>
 	</target>
 </project>

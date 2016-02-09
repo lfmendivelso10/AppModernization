@@ -1,27 +1,5 @@
 import "representacion2visualizacion.core.etl";
 
-/*@abstract
-rule Medible2ElementoDiagrama
-	transform i: source!Medible
-	to o: target!ElementoDiagrama  {
-		o.~metricas = i.metricas;
-}*/
-
-/*@abstract
-rule Elemento2NavegacionDiagrama
-	transform i: source!Elemento
-	to o: target!NavegacionDiagrama  {
-		--o.diagrama = o;
-}*/
-
-/*@abstract
-rule Medible2ElementoDiagrama
-	transform i: source!Medible
-	to o: target!ElementoDiagrama {
-		guard : i.metricas.isDefined()
-		o.~metricas = i.metricas;
-}*/
-
 @abstract
 rule Elemento2ElementoDiagrama
 	transform i: source!Elemento
@@ -38,30 +16,6 @@ rule Nodo2ElementoDiagrama
 	extends Elemento2ElementoDiagrama {
 		o.diagrama = o;
 }
-
-/*@abstract
-rule Vinculo2ElementoDiagrama
-	transform i: source!Vinculo
-	to o: target!ElementoDiagrama 
-	extends Elemento2ElementoDiagrama {
-		for (e in i.elementos) {
-			--e.addReferencia(i);
-		}	
-}*/
-
-/*@abstract
-rule Hoja2ElementoDiagrama
-	transform i: source!Hoja
-	to o: target!ElementoDiagrama 
-	extends Elemento2ElementoDiagrama {
-}*/
-
-/*@abstract
-rule Nodo2FiguraGeometrica
-	transform i: source!Nodo
-	to o: target!FiguraGeometrica 
-	extends Nodo2ElementoDiagrama {
-}*/
 
 @abstract
 rule Vinculo2FiguraGeometrica

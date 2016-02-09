@@ -46,20 +46,29 @@ operation calcularRangoTipoMetrica(elementos : Collection, tipo : source!EEnumLi
 }
 
 -- Elimina los diagramas obsoletos generados por "rules" que se redefinen en [operation source!Vinculo instanciarDiagrama() : target!Diagrama]
-operation eliminarDiagramasDuplicados() {
+operation eliminarDiagramasDuplicados() {	
+	"------------------------------------------------------------------------------------------".println();
+	"Ejecutando - eliminarDiagramasDuplicados . Archivo: representacion2visualizacion.utils.etl".println();
+	"-- Busca en todas las instancias del objetivo si tiene un diagrama del tipo Root, y lo define en la variable root.".println();
 	var root : target!Diagrama = target!Diagrama.allInstances()->select(d | d.isRoot = true)->first();
-	
+	"-- Root es encontrado?".println();
+	root.println();
+	"-- Valida. Esta definido?".println();
 	if(root.isDefined())
 	{
+		"Esta definido. Buscar número de duplicados".println();
 		var duplicados = root.elementos->select(e | e.isTypeOf(target!Diagrama));
-		
+				
 		"\tNúmero duplicados: ".print();
 		duplicados.size().println();
 		
 		for(d in duplicados) {
 			delete d;
 		}
+		"Se eliminan los duplicados encontrados".println();
 	}
+	"Fin del procedimiento.".println();
+	"------------------------------------------------------------------------------------------".println();
 }
 
 -- Elimina conectores sin target (ocurre cuando el target no se encuentra en el diagrama) generados en [operation source!Clase instanciarRelaciones(c : target!Clase, d : target!Diagrama) : Sequence]  

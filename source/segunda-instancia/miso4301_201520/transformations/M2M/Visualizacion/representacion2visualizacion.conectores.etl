@@ -1,14 +1,6 @@
 import "representacion2visualizacion.core.etl";
 import "representacion2visualizacion.metricas.etl";
 
-/*@abstract
-rule Medible2Conector
-	transform i: source!Medible
-	to o: target!Conector {
-		guard : i.metricas.isDefined()
-		o.~metricas = i.metricas;
-}*/
-
 @abstract
 rule Arco2Conector
 	transform i: source!Arco
@@ -90,20 +82,3 @@ operation actualizarReferenciasDiagrama() {
 		"*".print();
 	}
 }
-/*operation actualizarReferenciasDiagrama() {
-	var conectores = target!Conector.allInstances()->select(c | c.~arco.isDefined());
-	
-	"\tNúmero conectores: ".print();
-	conectores.size().println();
-	
-	for (c in conectores) {
-		var diagrama = target!Diagrama.allInstances()->select(d | d.~arco.isDefined() and (d.~arco = c.~arco))->first();
-	
-		if(diagrama.isDefined()) {
-			c.diagrama = diagrama;
-			break;
-		}
-		
-		"*".print();
-	}
-}*/
