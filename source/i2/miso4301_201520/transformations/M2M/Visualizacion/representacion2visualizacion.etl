@@ -1,0 +1,43 @@
+import "representacion2visualizacion.metricas.etl";
+import "representacion2visualizacion.elementos.etl";
+import "representacion2visualizacion.conectores.etl";
+import "representacion2visualizacion.vinculos.etl";
+import "representacion2visualizacion.utils.etl";
+
+
+pre {
+   "Step 4 -  Transformation -> SubKDM+SDM to Representation Model\n".println();
+   "Description:\n".println();
+   "Input: Representation Model".println();
+   "Output: Visualization Model".println();
+   var formaCluster;
+}
+
+post transformacionVinculos {
+	"EliminarDiagramasDuplicados".println();
+	eliminarDiagramasDuplicados();
+	
+	"\n\nActualizarReferenciasTarget".println();
+	actualizarReferenciasTarget();
+	
+	"\n\nActualizarReferenciasDiagrama".println();
+	actualizarReferenciasDiagrama();
+	
+	"\n\nEliminarConectoresSinTarget".println();
+	eliminarConectoresSinTarget();
+}
+
+post transformacionMetricas {
+	"\nCalcularRangoMetricas".println();
+	calcularRangoMetricas();
+	
+	"\nInstanciarMetricasFigurasGeometricas".println();
+	instanciarMetricasFigurasGeometricas();
+	
+	"\n\nInstanciarMetricasConectores".println();
+	instanciarMetricasConectores();
+}
+
+post {
+	"\n\nDone".println();
+}

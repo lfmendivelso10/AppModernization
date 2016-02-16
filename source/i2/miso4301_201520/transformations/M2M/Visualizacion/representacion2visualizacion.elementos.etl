@@ -1,0 +1,116 @@
+import "representacion2visualizacion.core.etl";
+
+@abstract
+rule Elemento2ElementoDiagrama
+	transform i: source!Elemento
+	to o: target!ElementoDiagrama
+	extends Medible2NavegacionDiagrama { --Medible2ElementoDiagrama
+		o.name = i.name;
+		o.conectores ::= i.relaciones;
+}
+
+@abstract
+rule Nodo2ElementoDiagrama
+	transform i: source!Nodo
+	to o: target!ElementoDiagrama 
+	extends Elemento2ElementoDiagrama {
+		o.diagrama = o;
+}
+
+@abstract
+rule Vinculo2FiguraGeometrica
+	transform i: source!Vinculo
+	to o: target!FiguraGeometrica 
+	extends Elemento2ElementoDiagrama { --Vinculo2ElementoDiagrama {
+		o.diagrama = i.instanciarDiagrama();
+}
+
+@abstract
+rule Nodo2Contenedor
+	transform i: source!Nodo
+	to o: target!Contenedor 
+	extends Nodo2ElementoDiagrama {
+		o.elementos ::= i.hijos;
+}
+
+@abstract
+rule Vinculo2Contenedor
+	transform i: source!Vinculo
+	to o: target!Contenedor 
+	extends Elemento2ElementoDiagrama { --Vinculo2ElementoDiagrama {
+		o.diagrama = i.instanciarDiagrama();
+}
+
+@abstract
+rule Hoja2Item
+	transform i: source!Hoja
+	to o: target!Item 
+	extends Elemento2ElementoDiagrama { --Hoja2ElementoDiagrama {
+}
+
+rule App2Diagrama
+	transform i: source!Aplicacion
+	to o: target!Diagrama 
+	extends Nodo2Contenedor {
+		o.isRoot = true;
+}
+
+rule Intercepcion2Diagrama
+	transform i: source!Intercepcion
+	to o: target!Diagrama 
+	extends Vinculo2Contenedor {
+		o.diagrama.~arco = i.arco;
+		--i.name.println();
+		--i.arco.target.name.println();
+		--i.arco.source.name.println();
+		
+		--delete o;
+		--"*".print();
+}
+
+rule Paquete2Paquete
+	transform i: source!Paquete
+	to o: target!Paquete 
+	extends Nodo2Contenedor {
+}
+
+rule Clase2Clase
+	transform i: source!Clase
+	to o: target!Clase 
+	extends Nodo2Contenedor {
+}
+
+rule Cluster2Elipse
+	transform i: source!Cluster
+	to o: target!Elipse 
+	extends Vinculo2FiguraGeometrica {
+		guard : formaCluster = "Elíptica"
+}
+
+rule Cluster2Triangulo
+	transform i: source!Cluster
+	to o: target!Triangulo 
+	extends Vinculo2FiguraGeometrica {
+		guard : formaCluster = "Triangular"
+}
+
+rule Cluster2Cuadrilatero
+	transform i: source!Cluster
+	to o: target!Cuadrilatero 
+	extends Vinculo2FiguraGeometrica {
+		guard : formaCluster = "Cuadrangular"
+}
+
+rule Metodo2Item
+	transform i: source!Metodo
+	to o: target!Item 
+	extends Hoja2Item {
+		o.icono="MessageSynchCallCreation";
+}
+
+rule Atributo2Item
+	transform i: source!Atributo
+	to o: target!Item 
+	extends Hoja2Item {
+		o.icono="PropertyCreation";
+}

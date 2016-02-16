@@ -1,0 +1,154 @@
+import "representacion2visualizacion.utils.etl";
+
+--Permite calcular por diagrama los valores extremos y poder homogenizar asignaciones de tamaño
+operation calcularRangoMetricas() {
+	var diagramas = target!Diagrama.allInstances();
+	for(d in diagramas) {
+		d.calcularRangoNumberOfClassesMeasure();
+		d.calcularRangoNumberOfLinesMeasure();
+	}
+}
+
+operation target!Diagrama calcularRangoNumberOfClassesMeasure() {
+	var tipo : source!EEnumLiteral = source!TipoMetrica#NumberOfClassesMeasure;
+	
+	var elementos = self.elementos->select(e | e.~metricas.isDefined());
+	var rango = calcularRangoTipoMetrica(elementos, tipo);
+	if(rango.isDefined()) {
+		self.~minNumberOfClassesElementos = rango.get(0);
+		self.~maxNumberOfClassesElementos = rango.get(1);
+	}
+	
+	
+	var conectores = buscarConectoresPorDiagrama(self);
+	rango = calcularRangoTipoMetrica(conectores, tipo);
+	if(rango.isDefined()) {
+		self.~minNumberOfClassesConectores = rango.get(0);
+		self.~maxNumberOfClassesConectores = rango.get(1);
+	}
+	
+	self.agregarConectores(conectores);
+}
+
+operation target!Diagrama calcularRangoNumberOfLinesMeasure() {
+	var tipo : source!EEnumLiteral = source!TipoMetrica#NumberOfLinesMeasure;
+	
+	var elementos = self.elementos->select(e | e.~metricas.isDefined());
+	var rango = calcularRangoTipoMetrica(elementos, tipo);
+	if(rango.isDefined()) {
+		self.~minNumberOfLinesElementos = rango.get(0);
+		self.~maxNumberOfLinesElementos = rango.get(1);
+	}
+	
+	var conectores = buscarConectoresPorDiagrama(self);
+	rango = calcularRangoTipoMetrica(conectores, tipo);
+	if(rango.isDefined()) {
+		self.~minNumberOfLinesConectores = rango.get(0);
+		self.~maxNumberOfLinesConectores = rango.get(1);
+	}
+	
+	self.agregarConectores(conectores);
+}
+
+operation instanciarMetricasFigurasGeometricas() {
+	var diagramas = target!Diagrama.allInstances()->select(d | not d.elementos->select(e | e.isKindOf(target!FiguraGeometrica)).isEmpty());
+	
+	"\tNúmero diagramas: ".print();
+	diagramas.size().println();
+	
+	for(d in diagramas) {
+		d.asignarNumberOfClasses2FigurasGeometricas();
+  		d.asignarNumberOfLines2FigurasGeometricas();
+  		
+  		"*".print();
+	}
+}
+
+operation target!Diagrama asignarNumberOfClasses2FigurasGeometricas() {
+	var maxTamano = 20;
+	var minTamano = 5; 
+	
+	var figuras = self.elementos->select(e | e.isKindOf(target!FiguraGeometrica) and e.~metricas.isDefined());
+	for (f in figuras) {
+		for(m in f.~metricas) {
+			if (m.tipo = source!TipoMetrica#NumberOfClassesMeasure) {
+				var porcentaje = (m.valor - self.~minNumberOfClassesElementos) / (self.~maxNumberOfClassesElementos - self.~minNumberOfClassesElementos);
+				var valor = ((maxTamano - minTamano) * porcentaje) + minTamano;
+				f.largo = valor.intValue();
+				f.alto = valor.intValue();
+			}
+		}
+	}
+}
+
+operation target!Diagrama asignarNumberOfLines2FigurasGeometricas() {
+	var rangoColores = Sequence {target!Color#blue, target!Color#green, target!Color#yellow, target!Color#orange, target!Color#red}; --azul, verde, amarillo, naranga, rojo
+	
+	var figuras = self.elementos->select(e | e.isKindOf(target!FiguraGeometrica) and e.~metricas.isDefined());
+	for (f in figuras) {
+		for(m in f.~metricas) {
+			if (m.tipo = source!TipoMetrica#NumberOfLinesMeasure) {
+				var porcentaje = (m.valor - self.~minNumberOfLinesElementos) / (self.~maxNumberOfLinesElementos - self.~minNumberOfLinesElementos);
+				var valor = (rangoColores.size() - 1) * porcentaje;
+				f.color = rangoColores.get(valor.intValue());
+			}
+		}
+	}
+}
+
+operation instanciarMetricasConectores() {
+	var maxGrosor = 5;
+	var minGrosor = 1; 
+	var diagramas = target!Diagrama.allInstances()->select(d | d.~conectores.isDefined());
+	
+	"\tNúmero diagramas: ".print();
+	diagramas.size().println();
+	
+	for(d in diagramas) {
+		for(c in d.~conectores) {
+			for(m in c.~metricas) {
+				if (m.tipo = source!TipoMetrica#NumberOfClassesMeasure) {
+					var porcentaje = (m.valor - d.~minNumberOfClassesConectores) / (d.~maxNumberOfClassesConectores - d.~minNumberOfClassesConectores);
+					var valor = ((maxGrosor - minGrosor) * porcentaje) + minGrosor;
+					c.grosor = valor.intValue();
+				}
+			}
+		}
+		
+		"*".print();
+	}
+}
+
+operation source!Medible buscarMetricaCouplingBetweenObjects() : String {
+	--self.println();
+	for(m in self.metricas) {
+		--m.println();
+		if (m.tipo = source!TipoMetrica#CouplingBetweenObjects) {
+			--m.valor.println();
+			return "[cbo: " + m.valor + "]";
+		}
+	}
+	
+	--return "[cbo: 3]"; --Eliminar
+}
+
+operation source!Medible buscarMetricaClusterRelationConflictPercentageMeasure(c : target!Conector) {
+	for(m in self.metricas) {
+		if (m.tipo = source!TipoMetrica#ClusterRelationConflictPercentageMeasureTarget) {
+			c.nameTarget = formatPercentage(m.valor);
+			c.~percentageMeasureTarget = m.valor;
+		}
+	}
+	
+	for(m in self.metricas) {
+		if (m.tipo = source!TipoMetrica#ClusterRelationConflictPercentageMeasureSource) {
+			c.nameSource = formatPercentage(m.valor);
+			c.~percentageMeasureSource = m.valor;
+		}
+	}
+}
+
+operation formatPercentage(metrica : Real) : String {
+	var valor = metrica * 100; 
+	return valor.intValue() + "%";
+}

@@ -1,0 +1,20 @@
+<div class="dashbox">
+
+	<p>
+		<img src="<%= url_for_static(:plugin => 'simplifieddecisionmetrics', :path => 'logo_uniandes.jpg') -%>" height="42%" width="42%" />
+	</p>
+
+	<p>
+		<%= gchart('cht=bhs&chco=FF0000,00FF00,0000FF&chs=200x125&chd=s:FOE,THE,Bar&chxt=x,y&chxl=1:|Dec|Nov|Oct|0:||20K||60K||100K|') -%>
+	</p>
+
+	<p>
+		Java?:
+		<%= format_measure('ide_is_java') -%>
+	</p>
+
+	<p>
+		LOC:
+		<%= format_measure('ncloc', :suffix => ' lines', :url => url_for_drilldown('ncloc')) -%>
+	</p>
+</div>

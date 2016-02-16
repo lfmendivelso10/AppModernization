@@ -1,0 +1,7 @@
+@abstract
+rule Medible2NavegacionDiagrama
+transform i: source!Medible
+	to o: target!NavegacionDiagrama {
+		guard : i.metricas.isDefined()
+		o.~metricas = i.metricas;
+}

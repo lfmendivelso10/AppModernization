@@ -1,0 +1,2076 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:visualizacionMetricas3.representacion="http://visualizacionMetricas3/representacion">
+  <visualizacionMetricas3.representacion:Dependencia/>
+  <visualizacionMetricas3.representacion:Asociacion/>
+  <visualizacionMetricas3.representacion:Composicion/>
+  <visualizacionMetricas3.representacion:Agregacion/>
+  <visualizacionMetricas3.representacion:Generalizacion/>
+  <visualizacionMetricas3.representacion:Aplicacion name="carrito.logic">
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.item.logic.dto.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ItemPageDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.0/@hijos.2" tipos="/4" source="/5/@hijos.0/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="ItemPageDTO"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ItemDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="9.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.0/@hijos.3" tipos="/4" source="/5/@hijos.0/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="ItemDTO"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ItemPageDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setTotalRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getTotalRecords"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ItemDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="5.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="8.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="8.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setCantidad"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setProductoId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCantidad"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductoId"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.item.logic.ejb.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ItemLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="2.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.3/@hijos.0" tipos="/4" source="/5/@hijos.1/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <relaciones target="/5/@hijos.1/@hijos.2" tipos="/4" source="/5/@hijos.1/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ItemLogicServiceTest">
+        <metricas tipo="CouplingBetweenObjects" valor="9.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="14.0"/>
+        <relaciones target="/5/@hijos.3/@hijos.0" tipos="/2" source="/5/@hijos.1/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.2/@hijos.0" tipos="/2" source="/5/@hijos.1/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.1" tipos="/2" source="/5/@hijos.1/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="20.0"/>
+          <metricas valor="40.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.0" tipos="/2" source="/5/@hijos.1/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="3.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.2/@hijos.1" tipos="/0" source="/5/@hijos.1/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.3" tipos="/0" source="/5/@hijos.1/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="39.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="39.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.3/@hijos.1" tipos="/0" source="/5/@hijos.1/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.2" tipos="/0" source="/5/@hijos.1/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="9.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="9.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createDeployment"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="configTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="clearData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="insertData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createItemTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItemsTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItemTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteItemTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateItemTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItemPaginationTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="DEPLOY"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="itemLogicService"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="itemPersistence"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="data"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ItemLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="7.0"/>
+        <relaciones target="/5/@hijos.2/@hijos.0" tipos="/2" source="/5/@hijos.1/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.2/@hijos.1" tipos="/0" source="/5/@hijos.1/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.1" tipos="/0" source="/5/@hijos.1/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.0" tipos="/0" source="/5/@hijos.1/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.3/@hijos.1" tipos="/4" source="/5/@hijos.1/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItems"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItems"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="persistance"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.item.persistence.api.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="IItemPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.2/@hijos.1" tipos="/4" source="/5/@hijos.2/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_IItemPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="8.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <relaciones target="/5/@hijos.0/@hijos.1" tipos="/0" source="/5/@hijos.2/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.0" tipos="/0" source="/5/@hijos.2/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItems"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItems"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateItem"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.item.logic.api.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="IItemLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="3.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.3/@hijos.1" tipos="/4" source="/5/@hijos.3/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_IItemLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <relaciones target="/5/@hijos.0/@hijos.1" tipos="/0" source="/5/@hijos.3/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItems"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItems"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Cluster" name="ItemLogicService" elementos="/5/@hijos.0/@hijos.0 /5/@hijos.1/@hijos.0 /5/@hijos.2/@hijos.0 /5/@hijos.2/@hijos.1 /5/@hijos.0/@hijos.1 /5/@hijos.0/@hijos.2 /5/@hijos.3/@hijos.0 /5/@hijos.0/@hijos.3 /5/@hijos.1/@hijos.1 /5/@hijos.1/@hijos.2 /5/@hijos.3/@hijos.1">
+      <metricas tipo="NumberOfLinesMeasure" valor="47.0"/>
+      <metricas tipo="NumberOfClassesMeasure" valor="11.0"/>
+      <relaciones target="/5/@hijos.26" tipos="/1" source="/5/@hijos.4">
+        <metricas tipo="NumberOfLinesMeasure" valor="20.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="6.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.2"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.5454545454545454"/>
+      </relaciones>
+      <relaciones target="/5/@hijos.27" tipos="/1" source="/5/@hijos.4">
+        <metricas tipo="NumberOfLinesMeasure" valor="41.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="9.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.391304347826087"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.8181818181818182"/>
+      </relaciones>
+      <relaciones target="/5/@hijos.33" tipos="/1" source="/5/@hijos.4">
+        <metricas tipo="NumberOfLinesMeasure" valor="9.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="2.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.08333333333333333"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.18181818181818182"/>
+      </relaciones>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.logic.api.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ICarritoLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="3.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.5/@hijos.1" tipos="/4" source="/5/@hijos.5/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ICarritoLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <relaciones target="/5/@hijos.7/@hijos.0" tipos="/0" source="/5/@hijos.5/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritos"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.logic.ejb.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_CarritoLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="7.0"/>
+        <relaciones target="/5/@hijos.8/@hijos.0" tipos="/2" source="/5/@hijos.6/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.8/@hijos.1" tipos="/0" source="/5/@hijos.6/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.0" tipos="/0" source="/5/@hijos.6/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.3" tipos="/0" source="/5/@hijos.6/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.5/@hijos.1" tipos="/4" source="/5/@hijos.6/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="persistance"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="2.0"/>
+        <relaciones target="/5/@hijos.8/@hijos.0" tipos="/0" source="/5/@hijos.6/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.3" tipos="/0" source="/5/@hijos.6/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.5/@hijos.0" tipos="/4" source="/5/@hijos.6/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <relaciones target="/5/@hijos.6/@hijos.0" tipos="/4" source="/5/@hijos.6/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoCliente"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="URL_SERVICIO"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoLogicServiceTest">
+        <metricas tipo="CouplingBetweenObjects" valor="9.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="14.0"/>
+        <relaciones target="/5/@hijos.5/@hijos.0" tipos="/2" source="/5/@hijos.6/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.8/@hijos.0" tipos="/2" source="/5/@hijos.6/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.0" tipos="/2" source="/5/@hijos.6/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="20.0"/>
+          <metricas valor="40.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.3" tipos="/2" source="/5/@hijos.6/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="3.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.8/@hijos.1" tipos="/0" source="/5/@hijos.6/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.1" tipos="/0" source="/5/@hijos.6/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="30.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="30.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.5/@hijos.1" tipos="/0" source="/5/@hijos.6/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.2" tipos="/0" source="/5/@hijos.6/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="9.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="9.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createDeployment"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="configTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="clearData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="insertData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createCarritoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritosTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteCarritoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateCarritoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoPaginationTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="DEPLOY"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="carritoLogicService"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="carritoPersistence"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="data"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.logic.dto.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="11.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.7/@hijos.1" tipos="/4" source="/5/@hijos.7/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="CarritoDTO"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_CarritoDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="5.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="6.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setClientId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClientId"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_CarritoPageDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="5.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setTotalRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getTotalRecords"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoPageDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="9.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.7/@hijos.2" tipos="/4" source="/5/@hijos.7/@hijos.3">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="CarritoPageDTO"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.persistence.api.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ICarritoPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="9.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.7/@hijos.3" tipos="/0" source="/5/@hijos.8/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.8/@hijos.1" tipos="/4" source="/5/@hijos.8/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoCliente"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ICarritoPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="8.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <relaciones target="/5/@hijos.7/@hijos.0" tipos="/0" source="/5/@hijos.8/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.3" tipos="/0" source="/5/@hijos.8/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateCarrito"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Cluster" name="CarritoLogicService" elementos="/5/@hijos.5/@hijos.0 /5/@hijos.6/@hijos.0 /5/@hijos.7/@hijos.0 /5/@hijos.7/@hijos.1 /5/@hijos.7/@hijos.2 /5/@hijos.7/@hijos.3 /5/@hijos.8/@hijos.0 /5/@hijos.6/@hijos.1 /5/@hijos.8/@hijos.1 /5/@hijos.5/@hijos.1 /5/@hijos.6/@hijos.2">
+      <metricas tipo="NumberOfLinesMeasure" valor="48.0"/>
+      <metricas tipo="NumberOfClassesMeasure" valor="11.0"/>
+      <relaciones target="/5/@hijos.26" tipos="/1" source="/5/@hijos.9">
+        <metricas tipo="NumberOfLinesMeasure" valor="19.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="6.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.2"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.5454545454545454"/>
+      </relaciones>
+      <relaciones target="/5/@hijos.33" tipos="/1" source="/5/@hijos.9">
+        <metricas tipo="NumberOfLinesMeasure" valor="19.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="6.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.25"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.5454545454545454"/>
+      </relaciones>
+      <relaciones target="/5/@hijos.43" tipos="/1" source="/5/@hijos.9">
+        <metricas tipo="NumberOfLinesMeasure" valor="42.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="9.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.45"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.8181818181818182"/>
+      </relaciones>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.client.logic.dto.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ClientDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="12.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="3.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="3.0"/>
+        <relaciones target="/5/@hijos.10/@hijos.3" tipos="/4" source="/5/@hijos.10/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="ClientDTO"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setRole"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getRole"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ClientPageDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setTotalRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getTotalRecords"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ClientPageDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.10/@hijos.1" tipos="/4" source="/5/@hijos.10/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="ClientPageDTO"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ClientDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="6.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setPassword"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getPassword"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getId"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.client.logic.ejb.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ClientLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="7.0"/>
+        <relaciones target="/5/@hijos.13/@hijos.1" tipos="/2" source="/5/@hijos.11/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.13/@hijos.0" tipos="/0" source="/5/@hijos.11/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.0" tipos="/0" source="/5/@hijos.11/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.2" tipos="/0" source="/5/@hijos.11/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.34/@hijos.1" tipos="/4" source="/5/@hijos.11/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClients"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClients"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="persistance"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ClientLogicServiceTest">
+        <metricas tipo="CouplingBetweenObjects" valor="9.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="14.0"/>
+        <relaciones target="/5/@hijos.34/@hijos.0" tipos="/2" source="/5/@hijos.11/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.13/@hijos.1" tipos="/2" source="/5/@hijos.11/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.0" tipos="/2" source="/5/@hijos.11/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="20.0"/>
+          <metricas valor="40.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.2" tipos="/2" source="/5/@hijos.11/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="3.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.13/@hijos.0" tipos="/0" source="/5/@hijos.11/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.3" tipos="/0" source="/5/@hijos.11/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="30.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="30.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.34/@hijos.1" tipos="/0" source="/5/@hijos.11/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.1" tipos="/0" source="/5/@hijos.11/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="9.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="9.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createDeployment"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="configTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="clearData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="insertData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createClientTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClientsTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClientTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteClientTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateClientTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClientPaginationTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="DEPLOY"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="clientLogicService"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="clientPersistence"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="data"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ClientLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.13/@hijos.1" tipos="/0" source="/5/@hijos.11/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.0" tipos="/0" source="/5/@hijos.11/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.34/@hijos.0" tipos="/4" source="/5/@hijos.11/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <relaciones target="/5/@hijos.11/@hijos.0" tipos="/4" source="/5/@hijos.11/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClientId"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.client.persistence.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ClientPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="7.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="7.0"/>
+        <relaciones target="/5/@hijos.14/@hijos.1" tipos="/2" source="/5/@hijos.12/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="3.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.2" tipos="/2 /0" source="/5/@hijos.12/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="3.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.15/@hijos.0" tipos="/0" source="/5/@hijos.12/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="5.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="5.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.1" tipos="/0" source="/5/@hijos.12/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.0" tipos="/0" source="/5/@hijos.12/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.13/@hijos.0" tipos="/4" source="/5/@hijos.12/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClients"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClients"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="entityManager"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ClientPersistenceTest">
+        <metricas tipo="CouplingBetweenObjects" valor="9.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="15.0"/>
+        <relaciones target="/5/@hijos.13/@hijos.1" tipos="/2" source="/5/@hijos.12/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.14/@hijos.1" tipos="/2" source="/5/@hijos.12/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="10.0"/>
+          <metricas valor="20.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.0" tipos="/2" source="/5/@hijos.12/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="7.0"/>
+          <metricas valor="14.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.2" tipos="/2" source="/5/@hijos.12/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.14/@hijos.0" tipos="/0" source="/5/@hijos.12/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="13.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="13.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.3" tipos="/0" source="/5/@hijos.12/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="14.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="14.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.13/@hijos.0" tipos="/0" source="/5/@hijos.12/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.1" tipos="/0" source="/5/@hijos.12/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createDeployment"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="configTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="clearData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="insertData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createClientTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClientsTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClientTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteClientTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateClientTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClientPaginationTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="DEPLOY"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="clientPersistence"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="em"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="utx"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="data"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ClientPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <relaciones target="/5/@hijos.14/@hijos.1" tipos="/2" source="/5/@hijos.12/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.15/@hijos.0" tipos="/0" source="/5/@hijos.12/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.3" tipos="/0" source="/5/@hijos.12/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.0" tipos="/0" source="/5/@hijos.12/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="3.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="3.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.13/@hijos.1" tipos="/4" source="/5/@hijos.12/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <relaciones target="/5/@hijos.12/@hijos.0" tipos="/4" source="/5/@hijos.12/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClientId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="convertedToHex"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="MD5"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.client.persistence.api.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_IClientPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="7.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <relaciones target="/5/@hijos.10/@hijos.0" tipos="/0" source="/5/@hijos.13/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.2" tipos="/0" source="/5/@hijos.13/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClients"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClients"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateClient"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="IClientPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="7.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.10/@hijos.0" tipos="/0" source="/5/@hijos.13/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.13/@hijos.0" tipos="/4" source="/5/@hijos.13/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClientId"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.client.persistence.entity.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ClientEntity">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="9.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getPassword"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setPassword"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="id"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="password"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="name"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ClientEntity">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <relaciones target="/5/@hijos.14/@hijos.0" tipos="/4" source="/5/@hijos.14/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getRole"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setRole"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="ClientEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="role"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.client.persistence.converter.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ClientConverter">
+        <metricas tipo="CouplingBetweenObjects" valor="7.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <relaciones target="/5/@hijos.10/@hijos.0" tipos="/2 /0" source="/5/@hijos.15/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="8.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.14/@hijos.1" tipos="/2 /0" source="/5/@hijos.15/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="8.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.3" tipos="/0" source="/5/@hijos.15/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.14/@hijos.0" tipos="/0" source="/5/@hijos.15/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.15/@hijos.1" tipos="/4" source="/5/@hijos.15/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="entity2PersistenceDTO"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="persistenceDTO2Entity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="entity2PersistenceDTOList"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="persistenceDTO2EntityList"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ClientConverter">
+        <metricas tipo="CouplingBetweenObjects" valor="5.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <relaciones target="/5/@hijos.10/@hijos.0" tipos="/2 /0" source="/5/@hijos.15/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.14/@hijos.1" tipos="/2 /0" source="/5/@hijos.15/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.10/@hijos.3" tipos="/0" source="/5/@hijos.15/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.14/@hijos.0" tipos="/0" source="/5/@hijos.15/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="entity2PersistenceDTO"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="persistenceDTO2Entity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="entity2PersistenceDTOList"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="persistenceDTO2EntityList"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Cluster" name="ClientPersistence" elementos="/5/@hijos.10/@hijos.0 /5/@hijos.11/@hijos.0 /5/@hijos.10/@hijos.1 /5/@hijos.12/@hijos.0 /5/@hijos.10/@hijos.2 /5/@hijos.12/@hijos.1 /5/@hijos.13/@hijos.0 /5/@hijos.12/@hijos.2 /5/@hijos.13/@hijos.1 /5/@hijos.11/@hijos.1 /5/@hijos.10/@hijos.3 /5/@hijos.11/@hijos.2 /5/@hijos.14/@hijos.0 /5/@hijos.14/@hijos.1 /5/@hijos.15/@hijos.0 /5/@hijos.15/@hijos.1">
+      <metricas tipo="NumberOfLinesMeasure" valor="90.0"/>
+      <metricas tipo="NumberOfClassesMeasure" valor="16.0"/>
+      <relaciones target="/5/@hijos.35" tipos="/1" source="/5/@hijos.16">
+        <metricas tipo="NumberOfLinesMeasure" valor="43.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="9.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.8181818181818182"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.5625"/>
+      </relaciones>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.master.logic.api.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ICarritoMasterLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="2.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ICarritoMasterLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="2.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.17/@hijos.0" tipos="/4" source="/5/@hijos.17/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.item.persistence.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ItemPersistenceTest">
+        <metricas tipo="CouplingBetweenObjects" valor="9.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="15.0"/>
+        <relaciones target="/5/@hijos.2/@hijos.0" tipos="/2" source="/5/@hijos.18/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.19/@hijos.1" tipos="/2" source="/5/@hijos.18/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="10.0"/>
+          <metricas valor="20.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.1" tipos="/2" source="/5/@hijos.18/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="7.0"/>
+          <metricas valor="14.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.0" tipos="/2" source="/5/@hijos.18/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.19/@hijos.0" tipos="/0" source="/5/@hijos.18/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="17.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="17.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.3" tipos="/0" source="/5/@hijos.18/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="19.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="19.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.2/@hijos.1" tipos="/0" source="/5/@hijos.18/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.2" tipos="/0" source="/5/@hijos.18/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createDeployment"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="configTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="clearData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="insertData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createItemTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItemsTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItemTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteItemTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateItemTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItemPaginationTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="DEPLOY"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="itemPersistence"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="em"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="utx"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="data"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ItemPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="2.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.2/@hijos.0" tipos="/4" source="/5/@hijos.18/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <relaciones target="/5/@hijos.18/@hijos.2" tipos="/4" source="/5/@hijos.18/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ItemPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="7.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="7.0"/>
+        <relaciones target="/5/@hijos.19/@hijos.1" tipos="/2" source="/5/@hijos.18/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="3.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.0" tipos="/2 /0" source="/5/@hijos.18/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="3.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.20/@hijos.1" tipos="/0" source="/5/@hijos.18/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="5.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="5.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.2" tipos="/0" source="/5/@hijos.18/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.1" tipos="/0" source="/5/@hijos.18/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.2/@hijos.1" tipos="/4" source="/5/@hijos.18/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItems"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItems"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateItem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="entityManager"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.item.persistence.entity.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ItemEntity">
+        <metricas tipo="CouplingBetweenObjects" valor="3.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="12.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCantidad"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setCantidad"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductoId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setProductoId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="id"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="cantidad"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="name"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="productoId"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ItemEntity">
+        <metricas tipo="CouplingBetweenObjects" valor="5.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.19/@hijos.0" tipos="/4" source="/5/@hijos.19/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="ItemEntity"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.item.persistence.converter.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ItemConverter">
+        <metricas tipo="CouplingBetweenObjects" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.20/@hijos.1" tipos="/4" source="/5/@hijos.20/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ItemConverter">
+        <metricas tipo="CouplingBetweenObjects" valor="7.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <relaciones target="/5/@hijos.0/@hijos.1" tipos="/2 /0" source="/5/@hijos.20/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.19/@hijos.1" tipos="/2 /0" source="/5/@hijos.20/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.3" tipos="/0" source="/5/@hijos.20/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="8.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="8.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.19/@hijos.0" tipos="/0" source="/5/@hijos.20/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="8.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="8.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="entity2PersistenceDTO"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="persistenceDTO2Entity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="entity2PersistenceDTOList"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="persistenceDTO2EntityList"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.master.persistence.api.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ICarritoMasterPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="5.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <relaciones target="/5/@hijos.25/@hijos.0" tipos="/0" source="/5/@hijos.21/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.23/@hijos.0" tipos="/0" source="/5/@hijos.21/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createCarritoitemEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteCarritoitemEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoitemEntityList"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ICarritoMasterPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="3.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.21/@hijos.0" tipos="/4" source="/5/@hijos.21/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.master.persistence.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_CarritoMasterPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="8.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <relaciones target="/5/@hijos.8/@hijos.0" tipos="/2" source="/5/@hijos.22/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.25/@hijos.0" tipos="/2 /0" source="/5/@hijos.22/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="3.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.0" tipos="/2" source="/5/@hijos.22/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.23/@hijos.0" tipos="/2 /0" source="/5/@hijos.22/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.25/@hijos.1" tipos="/0" source="/5/@hijos.22/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.20/@hijos.1" tipos="/0" source="/5/@hijos.22/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.21/@hijos.0" tipos="/4" source="/5/@hijos.22/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createCarritoitemEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteCarritoitemEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoitemEntityList"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="entityManager"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="carritoPersistence"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoMasterPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="2.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.21/@hijos.1" tipos="/4" source="/5/@hijos.22/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <relaciones target="/5/@hijos.22/@hijos.0" tipos="/4" source="/5/@hijos.22/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.master.persistence.entity.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoitemEntity">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="14.0"/>
+        <relaciones target="/5/@hijos.19/@hijos.1" tipos="/2 /0" source="/5/@hijos.23/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="8.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="CarritoitemEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="CarritoitemEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setCarritoId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItemId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setItemId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoIdEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setCarritoIdEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getItemIdEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setItemIdEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="carritoId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="itemId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="carritoIdEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="itemIdEntity"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.master.logic.ejb.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_CarritoMasterLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="15.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="7.0"/>
+        <relaciones target="/5/@hijos.8/@hijos.0" tipos="/2" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.21/@hijos.1" tipos="/2" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.2/@hijos.0" tipos="/2" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.0" tipos="/2" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.1" tipos="/2" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="7.0"/>
+          <metricas valor="14.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.23/@hijos.0" tipos="/2" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="3.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.25/@hijos.1" tipos="/0" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="13.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="13.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.1" tipos="/0" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.0/@hijos.3" tipos="/0" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="5.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="5.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.21/@hijos.0" tipos="/0" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="5.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="5.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.2/@hijos.1" tipos="/0" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="3.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="3.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.8/@hijos.1" tipos="/0" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.25/@hijos.0" tipos="/0" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.17/@hijos.0" tipos="/4" source="/5/@hijos.24/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createMasterCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getMasterCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteMasterCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateMasterCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="carritoPersistance"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="carritoMasterPersistance"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="itemPersistance"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoMasterLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="2.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.17/@hijos.1" tipos="/4" source="/5/@hijos.24/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <relaciones target="/5/@hijos.24/@hijos.0" tipos="/4" source="/5/@hijos.24/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.master.logic.dto.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoMasterDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.25/@hijos.1" tipos="/4" source="/5/@hijos.25/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="CarritoMasterDTO"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_CarritoMasterDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="6.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <relaciones target="/5/@hijos.7/@hijos.0" tipos="/0" source="/5/@hijos.25/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCreateitem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getUpdateitem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getDeleteitem"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setCarritoEntity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setListitem"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Cluster" name="CarritoMasterLogicService" elementos="/5/@hijos.2/@hijos.0 /5/@hijos.17/@hijos.0 /5/@hijos.18/@hijos.0 /5/@hijos.19/@hijos.0 /5/@hijos.20/@hijos.0 /5/@hijos.7/@hijos.1 /5/@hijos.2/@hijos.1 /5/@hijos.0/@hijos.1 /5/@hijos.8/@hijos.0 /5/@hijos.18/@hijos.1 /5/@hijos.21/@hijos.0 /5/@hijos.22/@hijos.0 /5/@hijos.23/@hijos.0 /5/@hijos.0/@hijos.0 /5/@hijos.7/@hijos.0 /5/@hijos.20/@hijos.1 /5/@hijos.7/@hijos.2 /5/@hijos.0/@hijos.2 /5/@hijos.19/@hijos.1 /5/@hijos.17/@hijos.1 /5/@hijos.24/@hijos.0 /5/@hijos.7/@hijos.3 /5/@hijos.21/@hijos.1 /5/@hijos.24/@hijos.1 /5/@hijos.0/@hijos.3 /5/@hijos.8/@hijos.1 /5/@hijos.25/@hijos.0 /5/@hijos.25/@hijos.1 /5/@hijos.22/@hijos.1 /5/@hijos.18/@hijos.2">
+      <metricas tipo="NumberOfLinesMeasure" valor="116.0"/>
+      <metricas tipo="NumberOfClassesMeasure" valor="30.0"/>
+      <relaciones target="/5/@hijos.27" tipos="/1" source="/5/@hijos.26">
+        <metricas tipo="NumberOfLinesMeasure" valor="90.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="20.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.8695652173913043"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.6666666666666666"/>
+      </relaciones>
+      <relaciones target="/5/@hijos.33" tipos="/1" source="/5/@hijos.26">
+        <metricas tipo="NumberOfLinesMeasure" valor="105.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="24.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="1.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.8"/>
+      </relaciones>
+      <relaciones target="/5/@hijos.43" tipos="/1" source="/5/@hijos.26">
+        <metricas tipo="NumberOfLinesMeasure" valor="32.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="10.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.5"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.3333333333333333"/>
+      </relaciones>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Cluster" name="ItemPersistence" elementos="/5/@hijos.0/@hijos.0 /5/@hijos.23/@hijos.0 /5/@hijos.2/@hijos.0 /5/@hijos.20/@hijos.1 /5/@hijos.0/@hijos.2 /5/@hijos.19/@hijos.1 /5/@hijos.18/@hijos.0 /5/@hijos.19/@hijos.0 /5/@hijos.24/@hijos.0 /5/@hijos.1/@hijos.0 /5/@hijos.20/@hijos.0 /5/@hijos.2/@hijos.1 /5/@hijos.0/@hijos.1 /5/@hijos.21/@hijos.1 /5/@hijos.24/@hijos.1 /5/@hijos.0/@hijos.3 /5/@hijos.18/@hijos.1 /5/@hijos.1/@hijos.1 /5/@hijos.1/@hijos.2 /5/@hijos.21/@hijos.0 /5/@hijos.22/@hijos.0 /5/@hijos.18/@hijos.2 /5/@hijos.22/@hijos.1">
+      <metricas tipo="NumberOfLinesMeasure" valor="111.0"/>
+      <metricas tipo="NumberOfClassesMeasure" valor="23.0"/>
+      <relaciones target="/5/@hijos.33" tipos="/1" source="/5/@hijos.27">
+        <metricas tipo="NumberOfLinesMeasure" valor="79.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="16.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.6666666666666666"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.6956521739130435"/>
+      </relaciones>
+      <relaciones target="/5/@hijos.43" tipos="/1" source="/5/@hijos.27">
+        <metricas tipo="NumberOfLinesMeasure" valor="13.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="4.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.2"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.17391304347826086"/>
+      </relaciones>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.producto.logic.api.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="IProductoLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="3.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.28/@hijos.1" tipos="/4" source="/5/@hijos.28/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_IProductoLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <relaciones target="/5/@hijos.30/@hijos.2" tipos="/0" source="/5/@hijos.28/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductos"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.producto.persistence.api.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_IProductoPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="7.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <relaciones target="/5/@hijos.30/@hijos.2" tipos="/0" source="/5/@hijos.29/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.3" tipos="/0" source="/5/@hijos.29/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateProducto"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="IProductoPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="5.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.29/@hijos.0" tipos="/4" source="/5/@hijos.29/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.producto.logic.dto.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ProductoDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getId"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ProductoPageDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setTotalRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getRecords"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getTotalRecords"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ProductoDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="8.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.30/@hijos.0" tipos="/4" source="/5/@hijos.30/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="ProductoDTO"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ProductoPageDTO">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.30/@hijos.1" tipos="/4" source="/5/@hijos.30/@hijos.3">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="ProductoPageDTO"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.producto.logic.ejb.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ProductoLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="2.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.28/@hijos.0" tipos="/4" source="/5/@hijos.31/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <relaciones target="/5/@hijos.31/@hijos.1" tipos="/4" source="/5/@hijos.31/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ProductoLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="7.0"/>
+        <relaciones target="/5/@hijos.29/@hijos.1" tipos="/2" source="/5/@hijos.31/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.29/@hijos.0" tipos="/0" source="/5/@hijos.31/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.2" tipos="/0" source="/5/@hijos.31/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.3" tipos="/0" source="/5/@hijos.31/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.28/@hijos.1" tipos="/4" source="/5/@hijos.31/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="persistance"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ProductoLogicServiceTest">
+        <metricas tipo="CouplingBetweenObjects" valor="9.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="14.0"/>
+        <relaciones target="/5/@hijos.28/@hijos.0" tipos="/2" source="/5/@hijos.31/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.29/@hijos.1" tipos="/2" source="/5/@hijos.31/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.2" tipos="/2" source="/5/@hijos.31/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="20.0"/>
+          <metricas valor="40.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.3" tipos="/2" source="/5/@hijos.31/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="3.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.29/@hijos.0" tipos="/0" source="/5/@hijos.31/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.0" tipos="/0" source="/5/@hijos.31/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="21.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="21.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.28/@hijos.1" tipos="/0" source="/5/@hijos.31/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.1" tipos="/0" source="/5/@hijos.31/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="9.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="9.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createDeployment"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="configTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="clearData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="insertData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createProductoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductosTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteProductoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateProductoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductoPaginationTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="DEPLOY"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="productoLogicService"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="productoPersistence"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="data"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Cluster" name="ProductoLogicService" elementos="/5/@hijos.28/@hijos.0 /5/@hijos.29/@hijos.0 /5/@hijos.30/@hijos.0 /5/@hijos.30/@hijos.1 /5/@hijos.31/@hijos.0 /5/@hijos.31/@hijos.1 /5/@hijos.30/@hijos.2 /5/@hijos.31/@hijos.2 /5/@hijos.30/@hijos.3 /5/@hijos.29/@hijos.1 /5/@hijos.28/@hijos.1">
+      <metricas tipo="NumberOfLinesMeasure" valor="43.0"/>
+      <metricas tipo="NumberOfClassesMeasure" valor="11.0"/>
+      <relaciones target="/5/@hijos.39" tipos="/1" source="/5/@hijos.32">
+        <metricas tipo="NumberOfLinesMeasure" valor="37.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="9.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.5625"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.8181818181818182"/>
+      </relaciones>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Cluster" name="CarritoMasterPersistence" elementos="/5/@hijos.23/@hijos.0 /5/@hijos.7/@hijos.0 /5/@hijos.20/@hijos.1 /5/@hijos.7/@hijos.2 /5/@hijos.19/@hijos.1 /5/@hijos.18/@hijos.0 /5/@hijos.19/@hijos.0 /5/@hijos.24/@hijos.0 /5/@hijos.20/@hijos.0 /5/@hijos.7/@hijos.1 /5/@hijos.0/@hijos.1 /5/@hijos.7/@hijos.3 /5/@hijos.21/@hijos.1 /5/@hijos.24/@hijos.1 /5/@hijos.0/@hijos.3 /5/@hijos.8/@hijos.0 /5/@hijos.18/@hijos.1 /5/@hijos.8/@hijos.1 /5/@hijos.21/@hijos.0 /5/@hijos.22/@hijos.0 /5/@hijos.25/@hijos.0 /5/@hijos.25/@hijos.1 /5/@hijos.22/@hijos.1 /5/@hijos.18/@hijos.2">
+      <metricas tipo="NumberOfLinesMeasure" valor="105.0"/>
+      <metricas tipo="NumberOfClassesMeasure" valor="24.0"/>
+      <relaciones target="/5/@hijos.43" tipos="/1" source="/5/@hijos.33">
+        <metricas tipo="NumberOfLinesMeasure" valor="32.0"/>
+        <metricas tipo="NumberOfClassesMeasure" valor="10.0"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureTarget" valor="0.5"/>
+        <metricas tipo="ClusterRelationConflictPercentageMeasureSource" valor="0.4166666666666667"/>
+      </relaciones>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.client.logic.api.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="IClientLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="3.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.34/@hijos.1" tipos="/4" source="/5/@hijos.34/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_IClientLogicService">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <relaciones target="/5/@hijos.10/@hijos.0" tipos="/0" source="/5/@hijos.34/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClients"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateClient"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClients"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Cluster" name="ClientLogicService" elementos="/5/@hijos.34/@hijos.0 /5/@hijos.10/@hijos.0 /5/@hijos.11/@hijos.0 /5/@hijos.13/@hijos.0 /5/@hijos.10/@hijos.1 /5/@hijos.34/@hijos.1 /5/@hijos.11/@hijos.1 /5/@hijos.13/@hijos.1 /5/@hijos.10/@hijos.3 /5/@hijos.10/@hijos.2 /5/@hijos.11/@hijos.2">
+      <metricas tipo="NumberOfLinesMeasure" valor="49.0"/>
+      <metricas tipo="NumberOfClassesMeasure" valor="11.0"/>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.producto.persistence.entity.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ProductoEntity">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.36/@hijos.1" tipos="/4" source="/5/@hijos.36/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="ProductoEntity"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ProductoEntity">
+        <metricas tipo="CouplingBetweenObjects" valor="3.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="6.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="name"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="id"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.producto.persistence.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ProductoPersistenceTest">
+        <metricas tipo="CouplingBetweenObjects" valor="9.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="15.0"/>
+        <relaciones target="/5/@hijos.29/@hijos.1" tipos="/2" source="/5/@hijos.37/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.36/@hijos.0" tipos="/2" source="/5/@hijos.37/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="10.0"/>
+          <metricas valor="20.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.2" tipos="/2" source="/5/@hijos.37/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="7.0"/>
+          <metricas valor="14.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.3" tipos="/2" source="/5/@hijos.37/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.36/@hijos.1" tipos="/0" source="/5/@hijos.37/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="9.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="9.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.0" tipos="/0" source="/5/@hijos.37/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="9.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="9.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.29/@hijos.0" tipos="/0" source="/5/@hijos.37/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.1" tipos="/0" source="/5/@hijos.37/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createDeployment"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="configTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="clearData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="insertData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createProductoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductosTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteProductoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateProductoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductoPaginationTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="DEPLOY"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="productoPersistence"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="em"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="utx"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="data"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ProductoPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="7.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="7.0"/>
+        <relaciones target="/5/@hijos.36/@hijos.0" tipos="/2" source="/5/@hijos.37/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="3.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.3" tipos="/2 /0" source="/5/@hijos.37/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="3.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.38/@hijos.1" tipos="/0" source="/5/@hijos.37/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="5.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="5.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.1" tipos="/0" source="/5/@hijos.37/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.2" tipos="/0" source="/5/@hijos.37/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.29/@hijos.0" tipos="/4" source="/5/@hijos.37/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProductos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateProducto"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="entityManager"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ProductoPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="2.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.29/@hijos.1" tipos="/4" source="/5/@hijos.37/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <relaciones target="/5/@hijos.37/@hijos.1" tipos="/4" source="/5/@hijos.37/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.producto.persistence.converter.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="ProductoConverter">
+        <metricas tipo="CouplingBetweenObjects" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.38/@hijos.1" tipos="/4" source="/5/@hijos.38/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_ProductoConverter">
+        <metricas tipo="CouplingBetweenObjects" valor="6.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <relaciones target="/5/@hijos.30/@hijos.2" tipos="/2 /0" source="/5/@hijos.38/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.36/@hijos.0" tipos="/2 /0" source="/5/@hijos.38/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.30/@hijos.0" tipos="/0" source="/5/@hijos.38/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.36/@hijos.1" tipos="/0" source="/5/@hijos.38/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="entity2PersistenceDTO"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="persistenceDTO2Entity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="entity2PersistenceDTOList"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="persistenceDTO2EntityList"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Cluster" name="ProductoPersistence" elementos="/5/@hijos.36/@hijos.0 /5/@hijos.29/@hijos.0 /5/@hijos.37/@hijos.0 /5/@hijos.36/@hijos.1 /5/@hijos.38/@hijos.0 /5/@hijos.31/@hijos.1 /5/@hijos.37/@hijos.1 /5/@hijos.30/@hijos.2 /5/@hijos.29/@hijos.1 /5/@hijos.37/@hijos.2 /5/@hijos.38/@hijos.1 /5/@hijos.30/@hijos.0 /5/@hijos.30/@hijos.1 /5/@hijos.31/@hijos.0 /5/@hijos.30/@hijos.3 /5/@hijos.31/@hijos.2">
+      <metricas tipo="NumberOfLinesMeasure" valor="70.0"/>
+      <metricas tipo="NumberOfClassesMeasure" valor="16.0"/>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.persistence.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_CarritoPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="7.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="7.0"/>
+        <relaciones target="/5/@hijos.42/@hijos.1" tipos="/2" source="/5/@hijos.40/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="3.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.3" tipos="/2 /0" source="/5/@hijos.40/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="3.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.41/@hijos.0" tipos="/0" source="/5/@hijos.40/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="5.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="5.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.2" tipos="/0" source="/5/@hijos.40/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.0" tipos="/0" source="/5/@hijos.40/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="4.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.8/@hijos.1" tipos="/4" source="/5/@hijos.40/@hijos.0">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritos"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateCarrito"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="entityManager"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoPersistence">
+        <metricas tipo="CouplingBetweenObjects" valor="5.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.7/@hijos.3" tipos="/2 /0" source="/5/@hijos.40/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="3.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.2" tipos="/0" source="/5/@hijos.40/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.41/@hijos.0" tipos="/0" source="/5/@hijos.40/@hijos.1">
+          <metricas tipo="NumberOfUses" valor="1.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="1.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.8/@hijos.0" tipos="/4" source="/5/@hijos.40/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <relaciones target="/5/@hijos.40/@hijos.0" tipos="/4" source="/5/@hijos.40/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoCliente"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoPersistenceTest">
+        <metricas tipo="CouplingBetweenObjects" valor="9.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="15.0"/>
+        <relaciones target="/5/@hijos.8/@hijos.0" tipos="/2" source="/5/@hijos.40/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="1.0"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.42/@hijos.1" tipos="/2" source="/5/@hijos.40/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="10.0"/>
+          <metricas valor="20.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.0" tipos="/2" source="/5/@hijos.40/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="7.0"/>
+          <metricas valor="14.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.3" tipos="/2" source="/5/@hijos.40/@hijos.2">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="4.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.42/@hijos.0" tipos="/0" source="/5/@hijos.40/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="13.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="13.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.1" tipos="/0" source="/5/@hijos.40/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="14.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="14.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.8/@hijos.1" tipos="/0" source="/5/@hijos.40/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="2.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.2" tipos="/0" source="/5/@hijos.40/@hijos.2">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createDeployment"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="configTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="clearData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="insertData"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="createCarritoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritosTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="deleteCarritoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="updateCarritoTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getCarritoPaginationTest"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="DEPLOY"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="carritoPersistence"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="em"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="utx"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="data"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.persistence.converter.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_CarritoConverter">
+        <metricas tipo="CouplingBetweenObjects" valor="7.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="4.0"/>
+        <relaciones target="/5/@hijos.7/@hijos.0" tipos="/2 /0" source="/5/@hijos.41/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.42/@hijos.1" tipos="/2 /0" source="/5/@hijos.41/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="2.0"/>
+          <metricas tipo="NumberOfContainments" valor="2.0"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.7/@hijos.1" tipos="/0" source="/5/@hijos.41/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <relaciones target="/5/@hijos.42/@hijos.0" tipos="/0" source="/5/@hijos.41/@hijos.0">
+          <metricas tipo="NumberOfUses" valor="6.0"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas valor="6.0"/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="entity2PersistenceDTO"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="persistenceDTO2Entity"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="entity2PersistenceDTOList"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="persistenceDTO2EntityList"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoConverter">
+        <metricas tipo="CouplingBetweenObjects" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure"/>
+        <relaciones target="/5/@hijos.41/@hijos.0" tipos="/4" source="/5/@hijos.41/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Paquete" name="co.edu.uniandes.csw.ejemplo.carrito.persistence.entity.">
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="_CarritoEntity">
+        <metricas tipo="CouplingBetweenObjects" valor="3.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="9.0"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setName"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="getClientId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="setClientId"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="id"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="name"/>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Atributo" name="clientId"/>
+      </hijos>
+      <hijos xsi:type="visualizacionMetricas3.representacion:Clase" name="CarritoEntity">
+        <metricas tipo="CouplingBetweenObjects" valor="4.0"/>
+        <metricas tipo="WeightedMethodsPerClass" valor="1.0"/>
+        <metricas tipo="NumberOfLinesMeasure" valor="1.0"/>
+        <relaciones target="/5/@hijos.42/@hijos.0" tipos="/4" source="/5/@hijos.42/@hijos.1">
+          <metricas tipo="NumberOfUses"/>
+          <metricas tipo="NumberOfContainments"/>
+          <metricas/>
+        </relaciones>
+        <hijos xsi:type="visualizacionMetricas3.representacion:Metodo" name="CarritoEntity"/>
+      </hijos>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Cluster" name="CarritoPersistence" elementos="/5/@hijos.40/@hijos.0 /5/@hijos.7/@hijos.0 /5/@hijos.7/@hijos.2 /5/@hijos.40/@hijos.1 /5/@hijos.41/@hijos.0 /5/@hijos.6/@hijos.1 /5/@hijos.24/@hijos.0 /5/@hijos.6/@hijos.0 /5/@hijos.40/@hijos.2 /5/@hijos.41/@hijos.1 /5/@hijos.7/@hijos.1 /5/@hijos.42/@hijos.0 /5/@hijos.7/@hijos.3 /5/@hijos.24/@hijos.1 /5/@hijos.8/@hijos.0 /5/@hijos.8/@hijos.1 /5/@hijos.42/@hijos.1 /5/@hijos.6/@hijos.2 /5/@hijos.22/@hijos.0 /5/@hijos.22/@hijos.1">
+      <metricas tipo="NumberOfLinesMeasure" valor="92.0"/>
+      <metricas tipo="NumberOfClassesMeasure" valor="20.0"/>
+    </hijos>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="CarritoMasterLogicService - ItemLogicService" elementos="/5/@hijos.0/@hijos.1 /5/@hijos.0/@hijos.0 /5/@hijos.2/@hijos.0 /5/@hijos.0/@hijos.2 /5/@hijos.2/@hijos.1 /5/@hijos.0/@hijos.3" arco="/5/@hijos.4/@relaciones.0"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="ItemPersistence - ItemLogicService" elementos="/5/@hijos.1/@hijos.2 /5/@hijos.0/@hijos.1 /5/@hijos.0/@hijos.0 /5/@hijos.1/@hijos.0 /5/@hijos.2/@hijos.0 /5/@hijos.0/@hijos.2 /5/@hijos.1/@hijos.1 /5/@hijos.2/@hijos.1 /5/@hijos.0/@hijos.3" arco="/5/@hijos.4/@relaciones.1"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="CarritoMasterPersistence - ItemLogicService" elementos="/5/@hijos.0/@hijos.1 /5/@hijos.0/@hijos.3" arco="/5/@hijos.4/@relaciones.2"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="CarritoMasterLogicService - CarritoLogicService" elementos="/5/@hijos.7/@hijos.3 /5/@hijos.8/@hijos.1 /5/@hijos.7/@hijos.1 /5/@hijos.8/@hijos.0 /5/@hijos.7/@hijos.0 /5/@hijos.7/@hijos.2" arco="/5/@hijos.9/@relaciones.0"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="CarritoMasterPersistence - CarritoLogicService" elementos="/5/@hijos.7/@hijos.3 /5/@hijos.7/@hijos.1 /5/@hijos.8/@hijos.0 /5/@hijos.8/@hijos.1 /5/@hijos.7/@hijos.0 /5/@hijos.7/@hijos.2" arco="/5/@hijos.9/@relaciones.1"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="CarritoPersistence - CarritoLogicService" elementos="/5/@hijos.7/@hijos.3 /5/@hijos.7/@hijos.1 /5/@hijos.8/@hijos.0 /5/@hijos.8/@hijos.1 /5/@hijos.6/@hijos.2 /5/@hijos.6/@hijos.1 /5/@hijos.7/@hijos.0 /5/@hijos.7/@hijos.2 /5/@hijos.6/@hijos.0" arco="/5/@hijos.9/@relaciones.2"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="ClientLogicService - ClientPersistence" elementos="/5/@hijos.11/@hijos.1 /5/@hijos.13/@hijos.0 /5/@hijos.10/@hijos.0 /5/@hijos.10/@hijos.1 /5/@hijos.11/@hijos.2 /5/@hijos.10/@hijos.2 /5/@hijos.10/@hijos.3 /5/@hijos.13/@hijos.1 /5/@hijos.11/@hijos.0" arco="/5/@hijos.16/@relaciones.0"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="ItemPersistence - CarritoMasterLogicService" elementos="/5/@hijos.0/@hijos.1 /5/@hijos.0/@hijos.0 /5/@hijos.2/@hijos.0 /5/@hijos.21/@hijos.0 /5/@hijos.2/@hijos.1 /5/@hijos.20/@hijos.1 /5/@hijos.20/@hijos.0 /5/@hijos.23/@hijos.0 /5/@hijos.22/@hijos.1 /5/@hijos.0/@hijos.2 /5/@hijos.18/@hijos.2 /5/@hijos.24/@hijos.0 /5/@hijos.19/@hijos.1 /5/@hijos.18/@hijos.1 /5/@hijos.0/@hijos.3 /5/@hijos.21/@hijos.1 /5/@hijos.18/@hijos.0 /5/@hijos.24/@hijos.1 /5/@hijos.22/@hijos.0 /5/@hijos.19/@hijos.0" arco="/5/@hijos.26/@relaciones.0"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="CarritoMasterPersistence - CarritoMasterLogicService" elementos="/5/@hijos.7/@hijos.3 /5/@hijos.0/@hijos.1 /5/@hijos.7/@hijos.1 /5/@hijos.8/@hijos.0 /5/@hijos.8/@hijos.1 /5/@hijos.21/@hijos.0 /5/@hijos.7/@hijos.0 /5/@hijos.7/@hijos.2 /5/@hijos.20/@hijos.1 /5/@hijos.20/@hijos.0 /5/@hijos.23/@hijos.0 /5/@hijos.22/@hijos.1 /5/@hijos.25/@hijos.1 /5/@hijos.18/@hijos.2 /5/@hijos.25/@hijos.0 /5/@hijos.24/@hijos.0 /5/@hijos.19/@hijos.1 /5/@hijos.18/@hijos.1 /5/@hijos.0/@hijos.3 /5/@hijos.21/@hijos.1 /5/@hijos.18/@hijos.0 /5/@hijos.24/@hijos.1 /5/@hijos.22/@hijos.0 /5/@hijos.19/@hijos.0" arco="/5/@hijos.26/@relaciones.1"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="CarritoPersistence - CarritoMasterLogicService" elementos="/5/@hijos.7/@hijos.3 /5/@hijos.7/@hijos.1 /5/@hijos.8/@hijos.0 /5/@hijos.8/@hijos.1 /5/@hijos.22/@hijos.1 /5/@hijos.24/@hijos.0 /5/@hijos.7/@hijos.0 /5/@hijos.7/@hijos.2 /5/@hijos.24/@hijos.1 /5/@hijos.22/@hijos.0" arco="/5/@hijos.26/@relaciones.2"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="CarritoMasterPersistence - ItemPersistence" elementos="/5/@hijos.0/@hijos.1 /5/@hijos.21/@hijos.0 /5/@hijos.20/@hijos.1 /5/@hijos.20/@hijos.0 /5/@hijos.23/@hijos.0 /5/@hijos.22/@hijos.1 /5/@hijos.18/@hijos.2 /5/@hijos.24/@hijos.0 /5/@hijos.19/@hijos.1 /5/@hijos.18/@hijos.1 /5/@hijos.0/@hijos.3 /5/@hijos.21/@hijos.1 /5/@hijos.18/@hijos.0 /5/@hijos.24/@hijos.1 /5/@hijos.22/@hijos.0 /5/@hijos.19/@hijos.0" arco="/5/@hijos.27/@relaciones.0"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="CarritoPersistence - ItemPersistence" elementos="/5/@hijos.22/@hijos.1 /5/@hijos.24/@hijos.0 /5/@hijos.24/@hijos.1 /5/@hijos.22/@hijos.0" arco="/5/@hijos.27/@relaciones.1"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="ProductoPersistence - ProductoLogicService" elementos="/5/@hijos.31/@hijos.1 /5/@hijos.31/@hijos.2 /5/@hijos.31/@hijos.0 /5/@hijos.29/@hijos.0 /5/@hijos.29/@hijos.1 /5/@hijos.30/@hijos.1 /5/@hijos.30/@hijos.2 /5/@hijos.30/@hijos.3 /5/@hijos.30/@hijos.0" arco="/5/@hijos.32/@relaciones.0"/>
+    <hijos xsi:type="visualizacionMetricas3.representacion:Intercepcion" name="CarritoPersistence - CarritoMasterPersistence" elementos="/5/@hijos.7/@hijos.3 /5/@hijos.7/@hijos.1 /5/@hijos.8/@hijos.0 /5/@hijos.8/@hijos.1 /5/@hijos.22/@hijos.1 /5/@hijos.24/@hijos.0 /5/@hijos.7/@hijos.0 /5/@hijos.7/@hijos.2 /5/@hijos.24/@hijos.1 /5/@hijos.22/@hijos.0" arco="/5/@hijos.33/@relaciones.0"/>
+  </visualizacionMetricas3.representacion:Aplicacion>
+</xmi:XMI>

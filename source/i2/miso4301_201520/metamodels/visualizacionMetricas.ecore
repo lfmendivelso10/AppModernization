@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="visualizacionMetricas3" nsURI="http://visualizacionMetricas3"
+    nsPrefix="visualizacionMetricas3">
+  <eClassifiers xsi:type="ecore:EClass" name="Elemento" abstract="true" eSuperTypes="#//Medible">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relaciones" upperBound="-1"
+        eType="#//Arco" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Nodo" abstract="true" interface="true"
+      eSuperTypes="#//Elemento">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hijos" upperBound="-1"
+        eType="#//Elemento" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Hoja" abstract="true" interface="true"
+      eSuperTypes="#//Elemento"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Medible" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metricas" upperBound="-1"
+        eType="#//Metrica" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Arco" eSuperTypes="#//Medible">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Elemento"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipos" lowerBound="1" upperBound="-1"
+        eType="#//TipoRelacion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Elemento"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Metrica">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoMetrica"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TipoRelacion" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="TipoMetrica">
+    <eLiterals name="CalculatedCoupling"/>
+    <eLiterals name="WeightedMethodsPerClass" value="1"/>
+    <eLiterals name="NumberOfUses" value="2"/>
+    <eLiterals name="NumberOfContainments" value="3"/>
+    <eLiterals name="CouplingBetweenObjects" value="4"/>
+    <eLiterals name="NumberOfClassesMeasure" value="5"/>
+    <eLiterals name="NumberOfLinesMeasure" value="6"/>
+    <eLiterals name="ClusterRelationConflictPercentageMeasureTarget" value="7"/>
+    <eLiterals name="ClusterRelationConflictPercentageMeasureSource" value="8"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vinculo" abstract="true" interface="true"
+      eSuperTypes="#//Elemento">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementos" upperBound="-1"
+        eType="#//Elemento"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetricaRelacion" eSuperTypes="#//Metrica">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacion" eType="#//Elemento"/>
+  </eClassifiers>
+  <eSubpackages name="representacion" nsURI="http://visualizacionMetricas3/representacion"
+      nsPrefix="visualizacionMetricas3.representacion">
+    <eClassifiers xsi:type="ecore:EClass" name="Cluster" eSuperTypes="#//Vinculo"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Paquete" eSuperTypes="#//Nodo"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Modulo" eSuperTypes="#//Nodo"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Clase" eSuperTypes="#//Nodo"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Archivo" eSuperTypes="#//Nodo"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Servicio" eSuperTypes="#//Vinculo"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Tabla" eSuperTypes="#//Nodo"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Form" eSuperTypes="#//Nodo"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Aplicacion" eSuperTypes="#//Nodo"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Dependencia" eSuperTypes="#//TipoRelacion"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Asociacion" eSuperTypes="#//TipoRelacion"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Composicion" eSuperTypes="#//TipoRelacion"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Agregacion" eSuperTypes="#//TipoRelacion"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Generalizacion" eSuperTypes="#//TipoRelacion"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Metodo" eSuperTypes="#//Hoja"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Atributo" eSuperTypes="#//Hoja"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Intercepcion" eSuperTypes="#//Vinculo">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="arco" lowerBound="1"
+          eType="#//Arco"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="visualizacion" nsURI="http://visualizacionMetricas3/visualizacion"
+      nsPrefix="visualizacionMetricas3.visualizacion">
+    <eClassifiers xsi:type="ecore:EClass" name="Elipse" eSuperTypes="#//visualizacion/FiguraGeometrica"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Cuadrilatero" eSuperTypes="#//visualizacion/FiguraGeometrica"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Contenedor" abstract="true" interface="true"
+        eSuperTypes="#//visualizacion/ElementoDiagrama">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="elementos" upperBound="-1"
+          eType="#//visualizacion/ElementoDiagrama" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Clase" eSuperTypes="#//visualizacion/Contenedor"/>
+    <eClassifiers xsi:type="ecore:EClass" name="FiguraGeometrica" abstract="true"
+        eSuperTypes="#//visualizacion/ElementoDiagrama">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//visualizacion/Color"
+          defaultValueLiteral="gray"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="largo" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"
+          defaultValueLiteral="3"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="alto" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"
+          defaultValueLiteral="3"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Color">
+      <eLiterals name="white"/>
+      <eLiterals name="black" value="1"/>
+      <eLiterals name="blue" value="2"/>
+      <eLiterals name="chocolate" value="3"/>
+      <eLiterals name="gray" value="4"/>
+      <eLiterals name="green" value="5"/>
+      <eLiterals name="orange" value="6"/>
+      <eLiterals name="purple" value="7"/>
+      <eLiterals name="red" value="8"/>
+      <eLiterals name="yellow" value="9"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rombo" eSuperTypes="#//visualizacion/FiguraGeometrica"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Triangulo" eSuperTypes="#//visualizacion/FiguraGeometrica"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Paquete" eSuperTypes="#//visualizacion/Contenedor"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Diagrama" eSuperTypes="#//visualizacion/Contenedor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRoot" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ElementoDiagrama" abstract="true"
+        interface="true" eSuperTypes="#//visualizacion/NavegacionDiagrama">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//visualizacion/Label"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="borde" eType="#//visualizacion/Borde"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conectores" upperBound="-1"
+          eType="#//visualizacion/Conector" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NavegacionDiagrama" abstract="true"
+        interface="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diagrama" eType="#//visualizacion/Contenedor"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Label">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBold" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isItalic" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="alineacion" eType="#//visualizacion/Alineacion"
+          defaultValueLiteral="CENTRO"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="posicion" eType="#//visualizacion/Posicion"
+          defaultValueLiteral="BORDE"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//visualizacion/Color"
+          defaultValueLiteral="black"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="tamanio" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"
+          defaultValueLiteral="8"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Alineacion">
+      <eLiterals name="CENTRO"/>
+      <eLiterals name="IZQUIERDA" value="1"/>
+      <eLiterals name="DERECHA" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Posicion">
+      <eLiterals name="BORDE"/>
+      <eLiterals name="NODO" value="1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Borde" eSuperTypes="#//visualizacion/Dibujable"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Conector" abstract="true" eSuperTypes="#//visualizacion/NavegacionDiagrama #//visualizacion/Dibujable">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="estilo" eType="#//visualizacion/EstiloLinea"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrutamiento" eType="#//visualizacion/TipoEnrutamiento"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="flecha_source" eType="#//visualizacion/TipoFlecha"
+          defaultValueLiteral="NO_TIENE"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="flecha_target" eType="#//visualizacion/TipoFlecha"
+          defaultValueLiteral="SENCILLA"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+          eType="#//visualizacion/ElementoDiagrama"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+          eType="#//visualizacion/ElementoDiagrama"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameSource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameTarget" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="EstiloLinea">
+      <eLiterals name="SOLIDA"/>
+      <eLiterals name="TRAZOS" value="1"/>
+      <eLiterals name="PUNTOS" value="2"/>
+      <eLiterals name="MIXTA" value="3"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="TipoEnrutamiento">
+      <eLiterals name="DIRECTO"/>
+      <eLiterals name="RECTILINEO" value="1"/>
+      <eLiterals name="ARBOL" value="2" literal="ARBOL"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="TipoFlecha">
+      <eLiterals name="NO_TIENE"/>
+      <eLiterals name="SENCILLA" value="1"/>
+      <eLiterals name="TRIANGULAR" value="2"/>
+      <eLiterals name="TRIANGULAR_RELLENA" value="3"/>
+      <eLiterals name="DIAMANTE" value="4"/>
+      <eLiterals name="DIAMANTE_RELLENA" value="5"/>
+      <eLiterals name="FLECHA_DIAMANTE" value="6"/>
+      <eLiterals name="FLECHA_DIAMANTE_RELLENA" value="7"/>
+      <eLiterals name="PATA_GALLINA" value="8"/>
+      <eLiterals name="PATA_GALLINA_TRIANGULAR" value="9"/>
+      <eLiterals name="PATA_GALLINA_RELLENA" value="10"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Punto" eSuperTypes="#//visualizacion/FiguraGeometrica"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Herencia" eSuperTypes="#//visualizacion/Conector"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Implementacion" eSuperTypes="#//visualizacion/Conector"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Dependencia" eSuperTypes="#//visualizacion/Conector"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Asociacion" eSuperTypes="#//visualizacion/Conector"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Agregacion" eSuperTypes="#//visualizacion/Conector"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Composicion" eSuperTypes="#//visualizacion/Conector"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Item" eSuperTypes="#//visualizacion/ElementoDiagrama">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="icono" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Dibujable" abstract="true" interface="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="grosor" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"
+          defaultValueLiteral="0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//visualizacion/Color"
+          defaultValueLiteral="black"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

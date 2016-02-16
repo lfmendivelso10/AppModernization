@@ -1,0 +1,106 @@
+pre {
+  "Running Simplification Transformation".println();
+  var percentage : Real;
+}
+
+operation generarDiagramaSimplificado() {
+	var diagrama = source!Diagrama.allInstances()->select(d | d.isRoot)->first();
+	var clusters = diagrama.elementos->select(e | e.isTypeOf(target!Elipse));
+	
+	"\tNúmero clusters: ".print();
+	clusters.size().println();
+	
+	var simplificado = new target!Diagrama();
+	simplificado.name = diagrama.name + " Simplificado " + (percentage * 100) + "%";
+	simplificado.elementos = new Sequence();
+	simplificado.diagrama = simplificado;
+	
+	var count = 1;
+	var visitados = new Set;
+	for (cluster in clusters) {
+		if (visitados->includes(cluster)) {
+			continue;
+		}
+			
+		"*".println();
+		var conectados = cluster.darConectados(percentage, visitados);
+		if (not conectados.isEmpty()) {
+			var clase  = new target!Clase();
+			clase.name = "Cluster " + count;
+			clase.elementos = new Sequence();
+			clase.diagrama = clase;
+			for(elem in conectados){
+				var item = new target!Item(); 
+				item.name = elem.name;
+				--item.icono = "MessageSynchCallCreation";
+				clase.elementos.add(item);
+				--visitados.add(elem);
+				".".print();
+			}
+			clase.~conectores= cluster.~conectores;
+			simplificado.elementos.add(clase);
+			count = count + 1;
+		}		
+	}
+	
+	"\n\tGenerarRelaciones".println();
+	generarRelacionesDiagramaSimplificado(simplificado);
+}
+
+operation target!Elipse darConectados(percentage : Real, visitados : Set) : Set {
+	var conjunto = new Set;
+	conjunto.add(self);
+	visitados.add(self);
+	self.~conectores = new Set;
+	
+	".".print();
+	for (conector in self.conectores->select(c | c.source = self)) {
+		var percentageMeasureSource = conector.nameSource.split("%")->first().asReal() / 100;
+		var percentageMeasureTarget = conector.nameTarget.split("%")->first().asReal() / 100;
+		if(percentageMeasureSource > percentage or percentageMeasureTarget > percentage) {
+			if (visitados->includes(conector.target)) {
+				continue;
+			}
+			conjunto.add(conector.target);
+			visitados.add(conector.target);
+			conjunto.addAll(conector.target.darConectados(percentage, visitados));
+		} else {
+			self.~conectores.add(conector.target.name);
+		}
+	}
+	return conjunto;
+}
+
+operation generarRelacionesDiagramaSimplificado(simplificado : target!Diagrama) {
+	for(clase in simplificado.elementos) {
+		var asociaciones = new Set;
+		for (conector in clase.~conectores) {
+			for (relacionado in simplificado.elementos->select(e | e <> clase)) {
+				if (relacionado.conectores->select(c | c.target = clase).isEmpty()) {
+					for (item in relacionado.elementos) {
+						if (item.name == conector) {
+							var asociacion = new target!Asociacion;
+							asociacion.enrutamiento = target!TipoEnrutamiento#DIRECTO;
+							asociacion.source = clase;
+							asociacion.target = relacionado;
+							asociaciones.add(asociacion);
+						}
+					}
+				}
+			}
+		}
+			
+		clase.conectores = asociaciones;
+	}
+}
+
+post {
+	"\n\nGenerarDiagramaSimplificado".println();
+	var index : Real = 1.0;
+	while (index > 0.0) {
+		percentage = index;
+		generarDiagramaSimplificado();
+		index = index - 0.05;	
+	}
+	"\n\nDone".println();
+}

@@ -1,0 +1,84 @@
+operation buscarConectoresPorDiagrama(diagrama : target!Diagrama) : Sequence {
+	var elementos = diagrama.elementos->select(e | e.conectores.isDefined());
+	var conectores = new Sequence;
+	for(e in elementos) {
+		for(c in e.conectores->select(c | c.~metricas.isDefined())) {
+			conectores.add(c);
+		}
+	}
+	
+	return conectores;
+}
+
+operation target!Diagrama agregarConectores(conectores : Sequence) {
+	if (not self.~conectores.isDefined()) {
+		self.~conectores = new Set;
+	}
+	for (c in conectores){
+		self.~conectores.add(c);
+	}
+}
+
+operation calcularRangoTipoMetrica(elementos : Collection, tipo : source!EEnumLiteral) : Sequence {
+	var max : Real;
+	var min = 9999999.9;
+	var encontrado = false;
+	encontrado = not elementos.isEmpty();
+	for(e in elementos) {
+		var metricas = e.~metricas->select(m | m.tipo = tipo);
+		for (m in metricas) {
+			if (max < m.valor) {
+				max = m.valor;
+			}
+			
+			if (min > m.valor) {
+				min = m.valor;
+			}
+		}
+	}
+	
+	if (encontrado) {
+		var rango = new Sequence;
+		rango.add(min);
+		rango.add(max);
+		return rango;
+	}
+}
+
+-- Elimina los diagramas obsoletos generados por "rules" que se redefinen en [operation source!Vinculo instanciarDiagrama() : target!Diagrama]
+operation eliminarDiagramasDuplicados() {	
+	"------------------------------------------------------------------------------------------".println();
+	"Ejecutando - eliminarDiagramasDuplicados . Archivo: representacion2visualizacion.utils.etl".println();
+	"-- Busca en todas las instancias del objetivo si tiene un diagrama del tipo Root, y lo define en la variable root.".println();
+	var root : target!Diagrama = target!Diagrama.allInstances()->select(d | d.isRoot = true)->first();
+	"-- Root es encontrado?".println();
+	root.println();
+	"-- Valida. Esta definido?".println();
+	if(root.isDefined())
+	{
+		"Esta definido. Buscar número de duplicados".println();
+		var duplicados = root.elementos->select(e | e.isTypeOf(target!Diagrama));
+				
+		"\tNúmero duplicados: ".print();
+		duplicados.size().println();
+		
+		for(d in duplicados) {
+			delete d;
+		}
+		"Se eliminan los duplicados encontrados".println();
+	}
+	"Fin del procedimiento.".println();
+	"------------------------------------------------------------------------------------------".println();
+}
+
+-- Elimina conectores sin target (ocurre cuando el target no se encuentra en el diagrama) generados en [operation source!Clase instanciarRelaciones(c : target!Clase, d : target!Diagrama) : Sequence]  
+operation eliminarConectoresSinTarget() {
+	var conectores = target!Conector.allInstances()->select(c | not c.target.isDefined());
+	
+	"\tNúmero conectores: ".print();
+	conectores.size().println();
+	
+	for (c in conectores) {
+		delete c;
+	}
+}

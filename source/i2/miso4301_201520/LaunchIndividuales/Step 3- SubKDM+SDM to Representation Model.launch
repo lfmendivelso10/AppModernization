@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.etl.eclipse.dt.launching.EtlLaunchConfigurationDelegate">
+<booleanAttribute key="fine_grained_profiling" value="true"/>
+<listAttribute key="models">
+<listEntry value="#&#10;#Tue Feb 09 13:18:51 COT 2016&#10;isMetamodelFileBased=false&#10;name=kdmMicro&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=kdmMicro&#10;cached=false&#10;fileBasedMetamodelUri=&#10;metamodelUri=http\://subkdm/kdmobjects,http\://subkdm/sdm,http\://subkdm/kdmrelations&#10;modelUri=platform\:/resource/miso4301_201520/models/2_SubKDM_SDM.xmi&#10;type=EMF&#10;modelFile=/miso4301_201520/models/2_SubKDM_SDM.xmi&#10;expand=true&#10;metamodelFile=&#10;"/>
+<listEntry value="#&#10;#Tue Feb 09 13:18:59 COT 2016&#10;isMetamodelFileBased=false&#10;name=target&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=target&#10;cached=false&#10;fileBasedMetamodelUri=&#10;metamodelUri=http\://visualizacionMetricas3&#10;modelUri=platform\:/resource/miso4301_201520/models/3_RepresentacionModel.xmi&#10;type=EMF&#10;modelFile=/miso4301_201520/models/3_RepresentacionModel.xmi&#10;expand=true&#10;metamodelFile=&#10;"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<booleanAttribute key="profile_model_loading" value="true"/>
+<booleanAttribute key="profiling_enabled" value="true"/>
+<booleanAttribute key="reset_profiler" value="true"/>
+<stringAttribute key="source" value="/miso4301_201520/transformations/M2M/Step3-SubKDM-SDM-to-Representacion-Model.etl"/>
+</launchConfiguration>
